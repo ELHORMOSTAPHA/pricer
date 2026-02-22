@@ -642,31 +642,112 @@
                     </div>
                     <!-- steps -->
                     <div class="steps-grid">
-                        <!-- etape 1 -->
+                        <!-- étape 1 -->
                         <div class="step-card appear">
-                            <span class="step-number">etap 1</span>
-                            <div class="step-content text-white">
-                                <div>
-                                    <!-- icon -->
-                                    <div></div>
-                                    <!-- title -->
-                                    <div></div>
+                            <span class="step-number">étape 1</span>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <!-- search/diagnostic icon -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <circle cx="11" cy="11" r="8" />
+                                        <line
+                                            x1="21"
+                                            y1="21"
+                                            x2="16.65"
+                                            y2="16.65"
+                                        />
+                                    </svg>
                                 </div>
-                                <div>
-                                    <!-- text -->
+                                <div class="step-title">
+                                    Étude &amp; dimensionnement
+                                </div>
+                                <p class="step-text">
+                                    Audit du magasin, estimation du besoin
+                                    (linéaire, catégories, contraintes), et
+                                    proposition d’un périmètre réaliste et
+                                    optimisé.
+                                </p>
+                                <div class="step-tags">
+                                    <span class="step-tag">Audit</span>
+                                    <span class="step-tag">Analyse</span>
+                                    <span class="step-tag">Cadrage</span>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- étape 2 -->
                         <div class="step-card appear">
-                            <span class="step-number">etap 2</span>
-                            <div class="step-content text-white">
-                                2. Mise en œuvre
+                            <span class="step-number">étape 2</span>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <!-- settings/deploy icon -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                    </svg>
+                                </div>
+                                <div class="step-title">
+                                    Déploiement &amp; configuration
+                                </div>
+                                <p class="step-text">
+                                    Installation des étiquettes, stations et
+                                    accessoires, configuration du système, et
+                                    préparation des flux de mise à jour.
+                                </p>
+                                <div class="step-tags">
+                                    <span class="step-tag">Déploiement</span>
+                                    <span class="step-tag">Intégration</span>
+                                    <span class="step-tag">Formation</span>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- étape 3 -->
                         <div class="step-card appear">
-                            <span class="step-number">etap 3</span>
-                            <div class="step-content text-white">
-                                3. Suivi & optimisation
+                            <span class="step-number">étape 3</span>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <!-- chart/optimisation icon -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <polyline
+                                            points="22 12 18 12 15 21 9 3 6 12 2 12"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="step-title">
+                                    Mise en production &amp; accompagnement
+                                </div>
+                                <p class="step-text">
+                                    Formation, tests, mise en service
+                                    progressive si nécessaire, puis support et
+                                    maintenance pour sécuriser l’exploitation.
+                                </p>
+                                <div class="step-tags">
+                                    <span class="step-tag">KPIs</span>
+                                    <span class="step-tag">Reporting</span>
+                                    <span class="step-tag">Itération</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -705,10 +786,156 @@
                     <div class="appear">
                         <h1 class="wrapper-title">Cas d'usage</h1>
                         <p>
-                            Découvrez comment nous avons transformé les
-                            opérations de nos clients grâce à des solutions
-                            innovantes et adaptées à leurs besoins spécifiques.
+                            Des scénarios concrets adaptés aux besoins terrain.
                         </p>
+                    </div>
+
+                    <!-- grid -->
+                    <div class="usage-grid">
+                        <!-- 1 — Pharmacies -->
+                        <div class="usage-card">
+                            <div class="card-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"
+                                    />
+                                    <path d="M12 8v8M8 12h8" />
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                Pharmacies &amp; parapharmacies
+                            </div>
+                            <p class="card-text">
+                                Affichage clair, mise à jour rapide des
+                                promotions et gain de temps en période de rush.
+                            </p>
+                            <span class="card-tag">Santé &amp; beauté</span>
+                        </div>
+
+                        <!-- 2 — Supermarchés -->
+                        <div class="usage-card">
+                            <div class="card-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                                    />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </div>
+                            <div class="card-title">Supermarchés</div>
+                            <p class="card-text">
+                                Gestion des changements massifs, promotions,
+                                rayons à forte rotation et cohérence entre le
+                                rayon et la caisse.
+                            </p>
+                            <span class="card-tag">Grande distribution</span>
+                        </div>
+
+                        <!-- 3 — Magasins spécialisés (dark) -->
+                        <div class="usage-card usage-card--dark">
+                            <div class="card-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="3"
+                                        width="20"
+                                        height="14"
+                                        rx="2"
+                                    />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                            </div>
+                            <div class="card-title">Magasins spécialisés</div>
+                            <p class="card-text">
+                                Électroménager, bricolage, décoration…
+                                informations prix et promotions alignées et
+                                faciles à piloter.
+                            </p>
+                            <span class="card-tag">Spécialisé</span>
+                        </div>
+
+                        <!-- 4 — Optimisation étiquettes (wide, dark) -->
+                        <div
+                            class="usage-card usage-card--dark usage-card--wide"
+                        >
+                            <div class="card-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline
+                                        points="22 12 18 12 15 21 9 3 6 12 2 12"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                Optimisation du nombre d'étiquettes
+                            </div>
+                            <p class="card-text">
+                                Pour optimiser le budget, il est possible (selon
+                                la configuration du rayon) de déployer une
+                                étiquette pour deux produits. Une optimisation
+                                encore plus poussée peut être envisagée avec des
+                                formats permettant d'afficher jusqu'à quatre
+                                produits. Ces optimisations se valident après
+                                une étude terrain et la définition du périmètre
+                                (linéaire, lisibilité, typologie de produits).
+                            </p>
+                            <span class="card-tag">Budget &amp; ROI</span>
+                        </div>
+
+                        <!-- 5 — Rails & supports -->
+                        <div class="usage-card">
+                            <div class="card-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <line x1="3" y1="12" x2="21" y2="12" />
+                                    <line x1="3" y1="18" x2="21" y2="18" />
+                                </svg>
+                            </div>
+                            <div class="card-title">Rails &amp; supports</div>
+                            <p class="card-text">
+                                Les rails et supports adaptés peuvent être
+                                fournis via nos partenaires au Maroc. Un devis
+                                complémentaire est établi selon le métrage et le
+                                type de linéaire.
+                            </p>
+                            <span class="card-tag">Infrastructure</span>
+                        </div>
                     </div>
                 </section>
                 <!-- realisations -->
