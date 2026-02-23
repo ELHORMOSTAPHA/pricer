@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link
@@ -1060,7 +1061,6 @@
                         </p>
                     </div>
                 </section>
-
                 <!-- ── VIDEO + FORM ── -->
                 <section class="contact-section">
                     <!-- video background -->
@@ -1446,88 +1446,9 @@
                 <!-- brand -->
                 <div class="footer-brand">
                     <img
-                        src="{{ asset('assets/media/conexus-it-log.png') }}"
+                        src="{{ asset('assets/media/images/conexus-it-log.png') }}"
                         alt="Conexus IT Solutions"
-                        onerror="
-                            this.style.display = 'none';
-                            this.nextElementSibling.style.display = 'flex';
-                        "
                     />
-                    <!-- fallback text logo -->
-                    <div
-                        style="
-                            display: none;
-                            align-items: center;
-                            gap: 10px;
-                            margin-bottom: 16px;
-                        "
-                    >
-                        <svg
-                            width="28"
-                            height="28"
-                            viewBox="0 0 28 28"
-                            fill="none"
-                        >
-                            <circle
-                                cx="6"
-                                cy="14"
-                                r="3"
-                                stroke="#4ade80"
-                                stroke-width="1.8"
-                            />
-                            <circle
-                                cx="22"
-                                cy="6"
-                                r="3"
-                                stroke="#4ade80"
-                                stroke-width="1.8"
-                            />
-                            <circle
-                                cx="22"
-                                cy="22"
-                                r="3"
-                                stroke="#4ade80"
-                                stroke-width="1.8"
-                            />
-                            <line
-                                x1="9"
-                                y1="14"
-                                x2="19"
-                                y2="7"
-                                stroke="#4ade80"
-                                stroke-width="1.5"
-                            />
-                            <line
-                                x1="9"
-                                y1="14"
-                                x2="19"
-                                y2="21"
-                                stroke="#4ade80"
-                                stroke-width="1.5"
-                            />
-                            <line
-                                x1="19"
-                                y1="7"
-                                x2="19"
-                                y2="21"
-                                stroke="#4ade80"
-                                stroke-width="1.5"
-                                stroke-dasharray="2 2"
-                            />
-                        </svg>
-                        <span
-                            style="
-                                font-family: 'Syne', sans-serif;
-                                font-size: 1.1rem;
-                                font-weight: 800;
-                                color: #fff;
-                                letter-spacing: -0.5px;
-                            "
-                        >
-                            Conexus
-                            <span style="color: hsl(115, 68%, 74%)">IT</span>
-                        </span>
-                    </div>
                     <p>
                         Spécialiste en étiquetage électronique Pricer au Maroc —
                         solutions pour pharmacies, supermarchés et magasins
@@ -1625,7 +1546,8 @@
                     Disponible pour votre projet
                 </div>
                 <span class="footer-copy">
-                    © 2025 Conexus IT Solutions. Tous droits réservés.
+                    © <?php echo date('Y'); ?> Conexus IT Solutions. Tous
+                    droits réservés.
                 </span>
                 <div class="footer-legal">
                     <a href="#">Politique de confidentialité</a>
@@ -1657,6 +1579,82 @@
                 </svg>
             </div>
         </a>
+
+        <!-- ══ CHAT TOGGLE BUTTON ══ -->
+        <button
+            id="chat-toggle"
+            title="Discuter avec nous"
+            aria-label="Ouvrir le chat"
+        >
+            <!-- Chat icon -->
+            <!-- <div
+                class="chat-icon"
+                style="
+                    background-color: black;
+                    background-image: url('{{ asset('assets/media/images/chat_bot.svg') }}');
+                "
+            ></div> -->
+            <img
+                class="chat-icon"
+                src="{{ asset('assets/media/images/chat_bot.svg') }}"
+                alt="Chat Bot"
+            />
+        </button>
+
+        <!-- ══ CHAT WINDOW ══ -->
+        <div id="chat-window" role="dialog" aria-label="Chat Conexus IT">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-header-avatar">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                    </svg>
+                </div>
+                <div class="chat-header-info">
+                    <div class="chat-header-name">Assistant Conexus IT</div>
+                    <div class="chat-header-status">
+                        En ligne · Répond instantanément
+                    </div>
+                </div>
+                <button
+                    class="chat-close"
+                    onclick="closeChat()"
+                    aria-label="Fermer"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Messages -->
+            <div id="chat-messages"></div>
+
+            <!-- Input -->
+            <div class="chat-input-area">
+                <textarea
+                    id="chat-input"
+                    placeholder="Posez votre question…"
+                    rows="1"
+                    onkeydown="handleKey(event)"
+                    oninput="autoResize(this)"
+                ></textarea>
+                <button id="chat-send" onclick="sendMessage()" title="Envoyer">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-footer">
+                Propulsé par
+                <span>Conexus IT</span>
+                × IA
+            </div>
+        </div>
 
         <!--================= jquery latest version =================-->
         <script src="{{ asset('assets/js/vendor/jquery.min.js') }}"></script>
@@ -1709,5 +1707,207 @@
         <script></script>
         <!--================= Script End Here =================-->
         <script></script>
+
+        <script>
+            const toggle = document.getElementById('chat-toggle');
+            const win = document.getElementById('chat-window');
+            const messages = document.getElementById('chat-messages');
+            const input = document.getElementById('chat-input');
+            const sendBtn = document.getElementById('chat-send');
+
+            let isOpen = false;
+
+            // Quick replies shown after welcome message
+            const quickReplies = [
+                'Nos services',
+                'Comment ça marche ?',
+                'Demander une démo',
+                'Nous contacter',
+            ];
+
+            /* ── Open / Close ── */
+            toggle.addEventListener('click', () =>
+                isOpen ? closeChat() : openChat()
+            );
+
+            function openChat() {
+                isOpen = true;
+                win.classList.add('open');
+                toggle.classList.add('open');
+                // Show welcome message once
+                if (messages.children.length === 0) showWelcome();
+                setTimeout(() => input.focus(), 300);
+            }
+
+            function closeChat() {
+                isOpen = false;
+                win.classList.remove('open');
+                toggle.classList.remove('open');
+            }
+
+            /* ── Welcome ── */
+            function showWelcome() {
+                addBotMessage(
+                    "Bonjour ! 👋 Je suis l'assistant de <strong>Conexus IT</strong>.<br>Comment puis-je vous aider aujourd'hui ?",
+                    quickReplies
+                );
+            }
+
+            /* ── Add messages ── */
+            function addBotMessage(html, replies = []) {
+                const wrap = document.createElement('div');
+                wrap.className = 'msg msg-bot';
+
+                const bubble = document.createElement('div');
+                bubble.className = 'msg-bubble';
+                bubble.innerHTML = html;
+                wrap.appendChild(bubble);
+
+                const time = document.createElement('div');
+                time.className = 'msg-time';
+                time.textContent = now();
+                wrap.appendChild(time);
+
+                if (replies.length) {
+                    const qr = document.createElement('div');
+                    qr.className = 'quick-replies';
+                    replies.forEach((r) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'quick-reply-btn';
+                        btn.textContent = r;
+                        btn.onclick = () => {
+                            qr.remove();
+                            handleQuickReply(r);
+                        };
+                        qr.appendChild(btn);
+                    });
+                    wrap.appendChild(qr);
+                }
+
+                messages.appendChild(wrap);
+                scroll();
+            }
+
+            function addUserMessage(text) {
+                const wrap = document.createElement('div');
+                wrap.className = 'msg msg-user';
+                wrap.innerHTML = `
+      <div class="msg-bubble">${escHtml(text)}</div>
+      <div class="msg-time">${now()}</div>
+    `;
+                messages.appendChild(wrap);
+                scroll();
+            }
+
+            function showTyping() {
+                const el = document.createElement('div');
+                el.className = 'msg msg-bot';
+                el.id = 'typing';
+                el.innerHTML = `
+      <div class="typing-indicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>`;
+                messages.appendChild(el);
+                scroll();
+                return el;
+            }
+
+            /* ── Send ── */
+            async function sendMessage() {
+                const text = input.value.trim();
+                if (!text || sendBtn.disabled) return;
+
+                addUserMessage(text);
+                input.value = '';
+                autoResize(input);
+
+                sendBtn.disabled = true;
+                const typingEl = showTyping();
+
+                try {
+                    const res = await fetch('/chatbot', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN':
+                                document.querySelector(
+                                    'meta[name="csrf-token"]'
+                                )?.content || '',
+                        },
+                        body: JSON.stringify({ message: text }),
+                    });
+                    const data = await res.json();
+                    console.log('Bot reply:', data.reply);
+                    typingEl.remove();
+                    addBotMessage(data.reply);
+                } catch {
+                    typingEl.remove();
+                    addBotMessage(
+                        'Désolé, une erreur est survenue. Veuillez réessayer ou nous <a href="#contact" style="color:#5be584">contacter directement</a>.'
+                    );
+                }
+
+                sendBtn.disabled = false;
+                input.focus();
+            }
+
+            function handleQuickReply(text) {
+                addUserMessage(text);
+                sendBtn.disabled = true;
+                const typingEl = showTyping();
+
+                // Simulate for demo — in production this calls /chatbot too
+                setTimeout(() => {
+                    typingEl.remove();
+                    const replies = {
+                        'Nos services':
+                            "Nous proposons des solutions d'étiquetage électronique de rayon (ESL) pour le retail : mise à jour instantanée des prix, réduction des erreurs, gain de temps et amélioration de l'expérience client. 🛒",
+                        'Comment ça marche ?':
+                            "C'est simple : nos étiquettes ESL sont connectées à votre système de caisse. Lorsqu'un prix change, il est mis à jour automatiquement sur tous les rayons en quelques secondes. 🔄",
+                        'Demander une démo':
+                            'Nous serions ravis de vous faire une démo ! Laissez-nous votre email ou rendez-vous sur notre page <strong>Contact</strong> et notre équipe vous répondra sous 24h. 📩',
+                        'Nous contacter':
+                            'Vous pouvez nous contacter via le formulaire sur notre site ou directement à <strong>contact@conexus-it.com</strong>. Nous répondons en moins de 24h ! ✉️',
+                    };
+                    addBotMessage(
+                        replies[text] ||
+                            'Merci pour votre question ! Notre équipe va vous répondre rapidement.'
+                    );
+                    sendBtn.disabled = false;
+                }, 1200);
+            }
+
+            /* ── Helpers ── */
+            function handleKey(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            }
+            function autoResize(el) {
+                el.style.height = 'auto';
+                el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+            }
+            function scroll() {
+                setTimeout(
+                    () => (messages.scrollTop = messages.scrollHeight),
+                    50
+                );
+            }
+            function now() {
+                return new Date().toLocaleTimeString('fr-FR', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                });
+            }
+            function escHtml(t) {
+                return t
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+            }
+        </script>
     </body>
 </html>

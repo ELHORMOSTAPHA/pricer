@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'groq' => [
+        'api_key' => env('GROQ_API_KEY'),
+        'ca_bundle' => env('CURL_CA_BUNDLE'),
+    ],
+
 ];
