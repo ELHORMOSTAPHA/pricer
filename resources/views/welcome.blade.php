@@ -324,7 +324,13 @@
                         "
                     ></div>
                     <div class="appear" style="margin-bottom: 100px">
-                        <h1 class="wrapper-title">pourqoi pricer?</h1>
+                        <h1 class="wrapper-title">
+                            pourqoi
+                            <span style="color: var(--color-primary)">
+                                pricer
+                            </span>
+                            ?
+                        </h1>
                         <p>
                             <span>
                                 <i
@@ -337,29 +343,26 @@
                             prix rayon/caisse.
                         </p>
                     </div>
+                    <!-- cards grid -->
                     <div class="why-pricer-grid">
                         <!-- 01 -->
-                        <div class="why-pricer-card appear">
+                        <div class="why-pricer-card">
                             <div class="card-top">
                                 <div class="card-icon">
                                     <svg
-                                        width="38"
-                                        height="38"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        stroke="hsl(115,55%,35%)"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
                                     >
                                         <path
                                             d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"
-                                            fill="none"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
                                         />
                                     </svg>
                                 </div>
-                                <div class="card-number">01</div>
+                                <span class="card-number">01</span>
                             </div>
                             <h3 class="card-title">Mise à jour instantanée</h3>
                             <p class="card-description">
@@ -370,33 +373,24 @@
                         </div>
 
                         <!-- 02 -->
-                        <div class="why-pricer-card appear">
+                        <div class="why-pricer-card">
                             <div class="card-top">
                                 <div class="card-icon">
                                     <svg
-                                        width="38"
-                                        height="38"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        stroke="hsl(115,55%,35%)"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
                                     >
                                         <path
                                             d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
                                         />
-                                        <polyline
-                                            points="14,2 14,8 20,8"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
+                                        <polyline points="14,2 14,8 20,8" />
                                     </svg>
                                 </div>
-                                <div class="card-number">02</div>
+                                <span class="card-number">02</span>
                             </div>
                             <h3 class="card-title">Moins d'erreurs</h3>
                             <p class="card-description">
@@ -406,32 +400,22 @@
                         </div>
 
                         <!-- 03 -->
-                        <div class="why-pricer-card appear">
+                        <div class="why-pricer-card">
                             <div class="card-top">
                                 <div class="card-icon">
                                     <svg
-                                        width="38"
-                                        height="38"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        stroke="hsl(115,55%,35%)"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
                                     >
-                                        <circle
-                                            cx="12"
-                                            cy="12"
-                                            r="10"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                        />
-                                        <polyline
-                                            points="12,6 12,12 16,14"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                        />
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12,6 12,12 16,14" />
                                     </svg>
                                 </div>
-                                <div class="card-number">03</div>
+                                <span class="card-number">03</span>
                             </div>
                             <h3 class="card-title">Gain de temps</h3>
                             <p class="card-description">
@@ -442,51 +426,44 @@
                         </div>
 
                         <!-- 04 -->
-                        <div class="why-pricer-card appear">
+                        <div class="why-pricer-card">
                             <div class="card-top">
                                 <div class="card-icon">
                                     <svg
-                                        width="38"
-                                        height="38"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        stroke="hsl(115,55%,35%)"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
                                     >
                                         <rect
                                             x="3"
                                             y="3"
                                             width="7"
                                             height="7"
-                                            stroke="#111110"
-                                            stroke-width="2"
                                         />
                                         <rect
                                             x="14"
                                             y="3"
                                             width="7"
                                             height="7"
-                                            stroke="#111110"
-                                            stroke-width="2"
                                         />
                                         <rect
                                             x="14"
                                             y="14"
                                             width="7"
                                             height="7"
-                                            stroke="#111110"
-                                            stroke-width="2"
                                         />
                                         <rect
                                             x="3"
                                             y="14"
                                             width="7"
                                             height="7"
-                                            stroke="#111110"
-                                            stroke-width="2"
                                         />
                                     </svg>
                                 </div>
-                                <div class="card-number">04</div>
+                                <span class="card-number">04</span>
                             </div>
                             <h3 class="card-title">Expérience client</h3>
                             <p class="card-description">
@@ -495,65 +472,33 @@
                             </p>
                         </div>
 
-                        <!-- 05 -->
-                        <div class="why-pricer-card appear">
+                        <!-- 05 — wide -->
+                        <div class="why-pricer-card">
                             <div class="card-top">
                                 <div class="card-icon">
                                     <svg
-                                        width="38"
-                                        height="38"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        stroke="hsl(115,55%,35%)"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
                                     >
                                         <path
                                             d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <polyline
-                                            points="7.5,4.21 12,6.81 16.5,4.21"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <polyline
-                                            points="7.5,19.79 7.5,14.6 3,12"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <polyline
-                                            points="21,12 16.5,14.6 16.5,19.79"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
                                         />
                                         <polyline
                                             points="3.27,6.96 12,12.01 20.73,6.96"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
                                         />
                                         <line
                                             x1="12"
                                             y1="22.08"
                                             x2="12"
                                             y2="12"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
                                         />
                                     </svg>
                                 </div>
-                                <div class="card-number">05</div>
+                                <span class="card-number">05</span>
                             </div>
                             <h3 class="card-title">Solution robuste</h3>
                             <p class="card-description">
@@ -563,52 +508,28 @@
                             </p>
                         </div>
 
-                        <!-- 06 -->
-                        <div class="why-pricer-card appear">
+                        <!-- 06 — wide -->
+                        <div class="why-pricer-card">
                             <div class="card-top">
                                 <div class="card-icon">
                                     <svg
-                                        width="38"
-                                        height="38"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        stroke="hsl(115,55%,35%)"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
                                     >
-                                        <line
-                                            x1="18"
-                                            y1="20"
-                                            x2="18"
-                                            y2="10"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <line
-                                            x1="12"
-                                            y1="20"
-                                            x2="12"
-                                            y2="4"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <line
-                                            x1="6"
-                                            y1="20"
-                                            x2="6"
-                                            y2="14"
-                                            stroke="#111110"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
+                                        <line x1="18" y1="20" x2="18" y2="10" />
+                                        <line x1="12" y1="20" x2="12" y2="4" />
+                                        <line x1="6" y1="20" x2="6" y2="14" />
                                     </svg>
                                 </div>
-                                <div class="card-number">06</div>
+                                <span class="card-number">06</span>
                             </div>
-                            <h3 class="card-title">Pilotage & visibilité</h3>
+                            <h3 class="card-title">
+                                Pilotage &amp; visibilité
+                            </h3>
                             <p class="card-description">
                                 Suivi du parc, supervision, accompagnement : une
                                 mise en production maîtrisée et évolutive.
@@ -952,16 +873,175 @@
                     <div class="appear">
                         <h1 class="wrapper-title text-white">Réalisations</h1>
                         <p>
-                            Découvrez comment nous avons transformé les
-                            opérations de nos clients grâce à des solutions
-                            innovantes et adaptées à leurs besoins spécifiques.
+                            Remplace les liens ci-dessous par tes 2 liens vers
+                            des réalisations Pricer dans le monde.
                         </p>
+                    </div>
+
+                    <div class="realisations-grid">
+                        <!-- LEFT — Inspiration & références -->
+                        <div class="panel">
+                            <div class="panel-title">
+                                Inspiration &amp; références
+                            </div>
+                            <p class="panel-subtitle">
+                                Découvrez des déploiements Pricer dans des
+                                réseaux retail exigeants et observez les gains
+                                opérationnels possibles.
+                            </p>
+
+                            <div class="link-list">
+                                <a href="#" class="link-row">
+                                    <div class="link-row-left">
+                                        <span class="link-icon">
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                                />
+                                                <path
+                                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                                />
+                                            </svg>
+                                        </span>
+                                        Réalisation Pricer #1 (à remplacer)
+                                    </div>
+                                    <span class="arrow-icon">
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <line
+                                                x1="5"
+                                                y1="12"
+                                                x2="19"
+                                                y2="12"
+                                            />
+                                            <polyline
+                                                points="12 5 19 12 12 19"
+                                            />
+                                        </svg>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="link-row">
+                                    <div class="link-row-left">
+                                        <span class="link-icon">
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                                />
+                                                <path
+                                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                                />
+                                            </svg>
+                                        </span>
+                                        Réalisation Pricer #2 (à remplacer)
+                                    </div>
+                                    <span class="arrow-icon">
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <line
+                                                x1="5"
+                                                y1="12"
+                                                x2="19"
+                                                y2="12"
+                                            />
+                                            <polyline
+                                                points="12 5 19 12 12 19"
+                                            />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="tip">
+                                <span class="tip-dot"></span>
+                                Astuce : tu peux ajouter une galerie photos ESL
+                                (Elementor) juste au-dessus.
+                            </div>
+                        </div>
+
+                        <!-- RIGHT — Notre accompagnement -->
+                        <div class="panel">
+                            <div class="panel-title">Notre accompagnement</div>
+                            <p class="panel-subtitle">
+                                Conexus IT gère le projet de bout en bout :
+                            </p>
+
+                            <div class="accomp-list">
+                                <div class="accomp-item">
+                                    <div class="accomp-bar"></div>
+                                    <div class="accomp-body">
+                                        <div class="accomp-title">
+                                            Étude &amp; cadrage
+                                        </div>
+                                        <div class="accomp-text">
+                                            Audit, dimensionnement, planning et
+                                            périmètre.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accomp-item">
+                                    <div class="accomp-bar"></div>
+                                    <div class="accomp-body">
+                                        <div class="accomp-title">
+                                            Fourniture &amp; installation
+                                        </div>
+                                        <div class="accomp-text">
+                                            ESL, stations, accessoires, pose et
+                                            configuration.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accomp-item">
+                                    <div class="accomp-bar"></div>
+                                    <div class="accomp-body">
+                                        <div class="accomp-title">
+                                            Formation &amp; support
+                                        </div>
+                                        <div class="accomp-text">
+                                            Prise en main, assistance,
+                                            maintenance.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- contact form -->
                 <section
                     class="wrapper"
-                    style="background-color: var(--color-bg1)"
+                    style="
+                        background-color: var(--color-bg1);
+                        margin-bottom: !important 0;
+                    "
                 >
                     <div
                         class="shape"
@@ -980,11 +1060,212 @@
                         </p>
                     </div>
                 </section>
+
+                <!-- ── VIDEO + FORM ── -->
+                <section class="contact-section">
+                    <!-- video background -->
+                    <video
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        class="background-video"
+                    >
+                        <source
+                            src="{{ asset('assets/media/videos/video_2.mp4') }}"
+                            type="video/mp4"
+                        />
+                    </video>
+
+                    <!-- frosted glass form -->
+                    <div class="form-panel">
+                        <!-- shape -->
+
+                        <div class="form-panel-title">
+                            Recevoir une démo + une estimation rapide
+                        </div>
+                        <p class="form-panel-sub">
+                            Remplis ce formulaire (2 minutes). Tu peux aussi
+                            passer par WhatsApp pour aller plus vite.
+                        </p>
+
+                        <form style="position: relative">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="nom">Nom &amp; prénom</label>
+                                    <input
+                                        type="text"
+                                        id="nom"
+                                        name="nom"
+                                        placeholder="Ex : Ghizlane Darbane"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="societe">Société</label>
+                                    <input
+                                        type="text"
+                                        id="societe"
+                                        name="societe"
+                                        placeholder="Ex : Nom de votre enseigne"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ville">Ville</label>
+                                    <input
+                                        type="text"
+                                        id="ville"
+                                        name="ville"
+                                        placeholder="Ex : Casablanca"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="type">Type de magasin</label>
+                                    <select id="type" name="type">
+                                        <option value="" disabled selected>
+                                            Choisir…
+                                        </option>
+                                        <option>
+                                            Pharmacie / Parapharmacie
+                                        </option>
+                                        <option>Supermarché</option>
+                                        <option>Magasin spécialisé</option>
+                                        <option>Autre</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="surface">
+                                        Surface (approx.)
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="surface"
+                                        name="surface"
+                                        placeholder="Ex : 120 m²"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="etiquettes">
+                                        Nombre d'étiquettes estimé
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="etiquettes"
+                                        name="etiquettes"
+                                        placeholder="Ex : 800"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tel">Téléphone</label>
+                                    <input
+                                        type="tel"
+                                        id="tel"
+                                        name="tel"
+                                        placeholder="Ex : +212 6XX XX XX XX"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Ex : contact@entreprise.ma"
+                                    />
+                                </div>
+
+                                <div class="form-group full">
+                                    <label for="message">Message</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        placeholder="Décris ton besoin : rayons concernés, promo fréquentes, contraintes…"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <!-- Submit -->
+                                <button type="submit" class="btn btn-primary">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    Envoyer ma demande
+                                </button>
+
+                                <!-- WhatsApp -->
+                                <a
+                                    href="https://wa.me/212600000000"
+                                    target="_blank"
+                                    class="btn btn-whatsapp"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                        />
+                                    </svg>
+                                    WhatsApp
+                                </a>
+
+                                <!-- Email -->
+                                <a
+                                    href="mailto:contact@conexus-it.ma"
+                                    class="btn btn-email"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                    Email
+                                </a>
+                            </div>
+
+                            <p class="form-legal">
+                                En envoyant ce formulaire, vous acceptez d'être
+                                contacté(e) par Conexus IT pour le traitement de
+                                votre demande. Nous n'utilisons pas vos
+                                informations à des fins autres que la prise de
+                                contact liée à ce projet.
+                            </p>
+                            <div
+                                class="shape"
+                                style="
+                                    background-image: url('{{ asset('assets/images/shapes/shape2.svg') }}');
+                                "
+                            ></div>
+                        </form>
+                    </div>
+                </section>
             </div>
         </main>
 
         <!--================= Footer Area Start Here =================-->
-        <footer class="ms-footer ms-footer--template">
+        <!-- <footer class="ms-footer ms-footer--template">
             <div class="container footer-container" data-parallax="on">
                 <div class="footer-inner">
                     <div class="footer-title text-center">
@@ -1098,6 +1379,257 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </footer> -->
+
+        <!-- ── CTA BANNER (sits on light bg, transitions into dark footer) ── -->
+        <div class="cta-wrapper">
+            <div class="cta-wordmark">Conexus IT</div>
+
+            <div class="cta-panel">
+                <div class="cta-left">
+                    <h2>
+                        Prêt à moderniser
+                        <br />
+                        votre
+                        <span>étiquetage</span>
+                        ?
+                    </h2>
+                    <p>
+                        Contactez-nous pour une démo personnalisée et une
+                        estimation rapide adaptée à votre réseau de magasins.
+                    </p>
+                </div>
+                <div class="cta-right">
+                    <div class="cta-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                                />
+                            </svg>
+                            Demander une démo
+                        </a>
+                        <a
+                            href="https://wa.me/212600000000"
+                            class="btn btn-ghost"
+                            target="_blank"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                width="16"
+                                height="16"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                />
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── FOOTER ── -->
+        <footer>
+            <div class="footer-main">
+                <!-- brand -->
+                <div class="footer-brand">
+                    <img
+                        src="{{ asset('assets/media/conexus-it-log.png') }}"
+                        alt="Conexus IT Solutions"
+                        onerror="
+                            this.style.display = 'none';
+                            this.nextElementSibling.style.display = 'flex';
+                        "
+                    />
+                    <!-- fallback text logo -->
+                    <div
+                        style="
+                            display: none;
+                            align-items: center;
+                            gap: 10px;
+                            margin-bottom: 16px;
+                        "
+                    >
+                        <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                        >
+                            <circle
+                                cx="6"
+                                cy="14"
+                                r="3"
+                                stroke="#4ade80"
+                                stroke-width="1.8"
+                            />
+                            <circle
+                                cx="22"
+                                cy="6"
+                                r="3"
+                                stroke="#4ade80"
+                                stroke-width="1.8"
+                            />
+                            <circle
+                                cx="22"
+                                cy="22"
+                                r="3"
+                                stroke="#4ade80"
+                                stroke-width="1.8"
+                            />
+                            <line
+                                x1="9"
+                                y1="14"
+                                x2="19"
+                                y2="7"
+                                stroke="#4ade80"
+                                stroke-width="1.5"
+                            />
+                            <line
+                                x1="9"
+                                y1="14"
+                                x2="19"
+                                y2="21"
+                                stroke="#4ade80"
+                                stroke-width="1.5"
+                            />
+                            <line
+                                x1="19"
+                                y1="7"
+                                x2="19"
+                                y2="21"
+                                stroke="#4ade80"
+                                stroke-width="1.5"
+                                stroke-dasharray="2 2"
+                            />
+                        </svg>
+                        <span
+                            style="
+                                font-family: 'Syne', sans-serif;
+                                font-size: 1.1rem;
+                                font-weight: 800;
+                                color: #fff;
+                                letter-spacing: -0.5px;
+                            "
+                        >
+                            Conexus
+                            <span style="color: hsl(115, 68%, 74%)">IT</span>
+                        </span>
+                    </div>
+                    <p>
+                        Spécialiste en étiquetage électronique Pricer au Maroc —
+                        solutions pour pharmacies, supermarchés et magasins
+                        spécialisés.
+                    </p>
+                    <div class="social-row">
+                        <!-- LinkedIn -->
+                        <a href="#" class="social-btn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="#" class="social-btn" title="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                />
+                            </svg>
+                        </a>
+                        <!-- Email -->
+                        <a
+                            href="mailto:contact@conexus-it.ma"
+                            class="social-btn"
+                            title="Email"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Étiquettes ESL Pricer</a></li>
+                        <li><a href="#">Stations de base</a></li>
+                        <li><a href="#">Rails &amp; supports</a></li>
+                        <li><a href="#">Logiciel de gestion</a></li>
+                        <li><a href="#">Intégration caisse</a></li>
+                    </ul>
+                </div>
+
+                <!-- Entreprise -->
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Réalisations</a></li>
+                        <li><a href="#">Cas d'usage</a></li>
+                        <li><a href="#">Comment ça marche</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Demander une démo</a></li>
+                        <li>
+                            <a href="https://wa.me/212600000000">WhatsApp</a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@conexus-it.ma">
+                                Email direct
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- bottom bar -->
+            <div class="footer-bottom">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    Disponible pour votre projet
+                </div>
+                <span class="footer-copy">
+                    © 2025 Conexus IT Solutions. Tous droits réservés.
+                </span>
+                <div class="footer-legal">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Mentions légales</a>
                 </div>
             </div>
         </footer>
