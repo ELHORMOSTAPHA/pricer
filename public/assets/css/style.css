@@ -5997,7 +5997,7 @@ html:not(.js) .f-header__nav {
 .main-header__layout .main-header__default .menu-item > a span::after {
     content: '';
     position: absolute;
-    left: -10px;
+    left: -5px;
     top: 50%;
     transform: translateY(-50%) scale(0) rotate(0.001deg);
     width: 0.4em;
@@ -6008,6 +6008,7 @@ html:not(.js) .f-header__nav {
         all 0.57s cubic-bezier(0.5, 0.5, 0, 1),
         transform 0.5s cubic-bezier(0.5, 0.5, 0, 1);
 }
+
 .main-header__layout .main-header__default .menu-item > .active span::after {
     transform: translateY(-50%) scale(1) rotate(0.001deg);
 }
@@ -6159,6 +6160,7 @@ html:not(.js) .f-header__nav {
 }
 .js .main-header__nav--is-visible::after {
     content: '';
+    display: none;
     position: absolute;
     top: -5px;
     right: 20px;

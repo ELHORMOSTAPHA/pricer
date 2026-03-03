@@ -1229,7 +1229,11 @@
 
                             <div class="form-actions">
                                 <!-- Submit -->
-                                <button type="submit" class="btn btn-primary">
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary"
+                                    id="contact-submit-btn"
+                                >
                                     <svg
                                         viewBox="0 0 24 24"
                                         fill="none"
@@ -1240,7 +1244,9 @@
                                     >
                                         <polyline points="20 6 9 17 4 12" />
                                     </svg>
-                                    Envoyer ma demande
+                                    <span class="submit-btn-label">
+                                        Envoyer ma demande
+                                    </span>
                                 </button>
 
                                 <!-- WhatsApp -->
@@ -2385,10 +2391,19 @@
                 if (!overlay) return;
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
-                document.getElementById('contact-form').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center',
-                });
+                console.log('Closing modal:', type);
+                if (type == 'success') {
+                    document.getElementById('contact-form').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                    });
+                } else {
+                    document.getElementById('accueil').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                    });
+                }
+
                 console.log(
                     'Modal closed, scroll to contact form',
                     document.getElementById('contact-form')
@@ -2401,10 +2416,19 @@
                     if (e.target === overlay) {
                         overlay.classList.remove('active');
                         document.body.style.overflow = '';
-                        document.getElementById('contact-form').scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'center',
-                        });
+                        if (overlay.id == 'modal-success') {
+                            document.getElementById('accueil').scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center',
+                            });
+                        } else {
+                            document
+                                .getElementById('contact-form')
+                                .scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center',
+                                });
+                        }
                     }
                 });
             });
@@ -2426,9 +2450,34 @@
             });
         </script>
         <script>
-            document
-                .getElementById('contact-form')
-                .addEventListener('submit', function (e) {
+            const contactForm = document.getElementById('contact-form');
+            const contactSubmitBtn = document.getElementById(
+                'contact-submit-btn'
+            );
+            const contactSubmitDefaultHtml = contactSubmitBtn.innerHTML;
+
+            function setContactSubmitLoading(isLoading) {
+                if (!contactSubmitBtn) return;
+
+                if (isLoading) {
+                    contactSubmitBtn.disabled = true;
+                    contactSubmitBtn.setAttribute('aria-busy', 'true');
+                    contactSubmitBtn.innerHTML = `
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation: icon-spin 1s linear infinite;">
+                            <circle cx="12" cy="12" r="9" opacity="0.35"></circle>
+                            <path d="M21 12a9 9 0 0 0-9-9"></path>
+                        </svg>
+                        <span class="submit-btn-label">Envoi en cours...</span>
+                    `;
+                    return;
+                }
+
+                contactSubmitBtn.disabled = false;
+                contactSubmitBtn.removeAttribute('aria-busy');
+                contactSubmitBtn.innerHTML = contactSubmitDefaultHtml;
+            }
+
+            contactForm.addEventListener('submit', function (e) {
                     e.preventDefault();
                     let isValid = true;
 
@@ -2510,6 +2559,8 @@
                                 block: 'center',
                             });
                     } else {
+                        setContactSubmitLoading(true);
+
                         //prepare data as an object
                         const formData = {
                             nom: nom.value.trim() || null,
@@ -2551,7 +2602,7 @@
                         })
                             .then((res) => {
                                 if (res.ok) {
-                                    showModal('success', formData.name);
+                                    showModal('success', formData.nom);
                                     this.reset();
                                 } else {
                                     throw new Error('Erreur lors de l’envoi.');
@@ -2559,6 +2610,9 @@
                             })
                             .catch(() => {
                                 showModal('error');
+                            })
+                            .finally(() => {
+                                setContactSubmitLoading(false);
                             });
                     }
                 });
