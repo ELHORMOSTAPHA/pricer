@@ -161,6 +161,11 @@
                                 <li class="menu-item"><a href="contact-3.html">Contact 3</a></li>
                             </ul> -->
                             </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#contact" title="Contacts">
+                                    <span>Contacter</span>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                     <div class="main-header__widgets">
@@ -1240,7 +1245,7 @@
 
                                 <!-- WhatsApp -->
                                 <a
-                                    href="https://wa.me/212600000000"
+                                    href="https://wa.me/212661220585"
                                     target="_blank"
                                     class="btn btn-whatsapp"
                                 >
@@ -1451,7 +1456,7 @@
                             Demander une démo
                         </a>
                         <a
-                            href="https://wa.me/212600000000"
+                            href="https://wa.me/212661220585"
                             class="btn btn-ghost"
                             target="_blank"
                         >
@@ -1544,11 +1549,13 @@
                 <div class="footer-col">
                     <h4>Entreprise</h4>
                     <ul>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Réalisations</a></li>
-                        <li><a href="#">Cas d'usage</a></li>
-                        <li><a href="#">Comment ça marche</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#accueil">À propos</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#cas-usage">Cas d'usage</a></li>
+                        <li>
+                            <a href="#comment-ca-marche">Comment ça marche</a>
+                        </li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1557,13 +1564,13 @@
                     <h4>Support</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Demander une démo</a></li>
+                        <li><a href="#contact">Documentation</a></li>
+                        <li><a href="#contact">Demander une démo</a></li>
                         <li>
-                            <a href="https://wa.me/212600000000">WhatsApp</a>
+                            <a href="https://wa.me/212661220585">WhatsApp</a>
                         </li>
                         <li>
-                            <a href="mailto:contact@conexus-it.ma">
+                            <a href="mailto:g.darbane@conexusit.ma">
                                 Email direct
                             </a>
                         </li>
@@ -1801,7 +1808,7 @@
                             Fermer
                         </button>
                         <a
-                            href="https://wa.me/212600000000"
+                            href="https://wa.me/212661220585"
                             class="modal-btn modal-btn--primary-green"
                             style="
                                 display: flex;
@@ -1948,7 +1955,7 @@
                             Contact direct
                         </p>
                         <a
-                            href="mailto:contact@conexus-it.ma"
+                            href="mailto:	g.darbane@conexusit.ma"
                             style="
                                 font-size: 0.85rem;
                                 color: #f87171;
@@ -1958,18 +1965,17 @@
                                 margin-bottom: 4px;
                             "
                         >
-                            contact
-                            @conexus-it.ma
+                            g.darbane@conexusit.ma
                         </a>
                         <a
-                            href="tel:+212600000000"
+                            href="tel:+212661220585"
                             style="
                                 font-size: 0.85rem;
                                 color: rgba(255, 255, 255, 0.55);
                                 text-decoration: none;
                             "
                         >
-                            +212 6XX XX XX XX
+                            +212 661 220 585
                         </a>
                     </div>
 
@@ -2068,7 +2074,6 @@
                         };
                     })
                     .filter(Boolean);
-                console.log('Detected sections for scroll spy:', sections);
 
                 if (!sections.length) return;
 
@@ -2304,7 +2309,7 @@
                         'Demander une démo':
                             'Nous serions ravis de vous faire une démo ! Laissez-nous votre email ou rendez-vous sur notre page <strong>Contact</strong> et notre équipe vous répondra sous 24h. 📩',
                         'Nous contacter':
-                            'Vous pouvez nous contacter via le formulaire sur notre site ou directement à <strong>contact@conexus-it.com</strong>. Nous répondons en moins de 24h ! ✉️',
+                            'Vous pouvez nous contacter via le formulaire sur notre site ou directement à <strong>g.darbane@conexusit.ma</strong>. Nous répondons en moins de 24h ! ✉️',
                     };
                     addBotMessage(
                         replies[text] ||
@@ -2380,10 +2385,14 @@
                 if (!overlay) return;
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
-                document.getEElementById('contact-form').scrollIntoView({
+                document.getElementById('contact-form').scrollIntoView({
                     behavior: 'smooth',
                     block: 'center',
                 });
+                console.log(
+                    'Modal closed, scroll to contact form',
+                    document.getElementById('contact-form')
+                );
             }
 
             // close on overlay click
@@ -2563,6 +2572,18 @@
                     if (err) err.textContent = '';
                 });
             });
+        </script>
+        <script>
+            // function closeMenu() {
+            //     const nav = document.getElementById('main-header-nav');
+            //     const button = document.querySelector(
+            //         '.js-main-header__nav-trigger'
+            //     );
+            //     if (nav.classList.contains('main-header__nav--is-visible')) {
+            //         nav.classList.remove('main-header__nav--is-visible');
+            //         document.body.style.overflow = '';
+            //     }
+            // }
         </script>
     </body>
 </html>

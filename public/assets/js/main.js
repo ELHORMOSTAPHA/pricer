@@ -396,40 +396,78 @@
                         )[0].focus();
                     }
                 });
+                //detect click out of nav and nav trigger
+                document.addEventListener('click', function (event) {
+                    if (
+                        !nav.contains(event.target) &&
+                        !trigger.contains(event.target)
+                    ) {
+                        //close nav and update button aria value
+                        if (
+                            Util.hasClass(nav, 'main-header__nav--is-visible')
+                        ) {
+                            Util.removeClass(
+                                nav,
+                                'main-header__nav--is-visible'
+                            );
+                            trigger.setAttribute('aria-expanded', false);
+                        }
+                    }
+                });
+                //close nav on nav item click
+
+                nav.querySelectorAll('.menu-item-has-children').forEach(
+                    function (item) {
+                        item.addEventListener('click', function (event) {
+                            var ariaExpanded = !Util.hasClass(
+                                nav,
+                                'main-header__nav--is-visible'
+                            );
+                            //close nav and update button aria value
+                            Util.toggleClass(
+                                nav,
+                                'main-header__nav--is-visible',
+                                ariaExpanded
+                            );
+                            trigger.setAttribute('aria-expanded', ariaExpanded);
+                        });
+                    }
+                );
             }
         }
         // if ($(window).width() > 1023) {
-            // Default Menu Style
-            if ($.exists('.menu-default')) {2
-                var m_item = $('.navbar-nav').find(' > li.menu-item > a');
+        // Default Menu Style
+        if ($.exists('.menu-default')) {
+            2;
+            var m_item = $('.navbar-nav').find(' > li.menu-item > a');
 
-                $(m_item).each(function () {
-                    $(this).html('<span>' + this.textContent + '</span>');
-                    $(this).attr('title', this.textContent);
-                });
-
-                var menu_type = $('body').attr('data-menu');
-                if (menu_type == 'fixed') {
-                    var header = $('.main-header__layout').addClass('top');
-                    $(window).scroll(function () {
-                        var scroll = $(window).scrollTop();
-
-                        if (scroll > 300) {
-                            header.removeClass('top').addClass('action');
-                        } else {
-                            header.addClass('top').removeClass('action');
-                        }
-                    });
-                }
-            }
-
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('.main-header').addClass('show-bg');
-                } else {
-                    $('.main-header').removeClass('show-bg');
-                }
+            $(m_item).each(function () {
+                $(this).html('<span>' + this.textContent + '</span>');
+                $(this).attr('title', this.textContent);
             });
+
+            var menu_type = $('body').attr('data-menu');
+            if (menu_type == 'fixed') {
+                var header = $('.main-header__layout').addClass('top');
+                $(window).scroll(function () {
+                    var scroll = $(window).scrollTop();
+
+                    if (scroll > 300) {
+                        header.removeClass('top').addClass('action');
+                    } else {
+                        header.addClass('top').removeClass('action');
+                    }
+                });
+            }
+        }
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.main-header').addClass('show-bg');
+            } else {
+                $('.main-header').removeClass('show-bg');
+            }
+        });
         // }
     }
     // Mobile Menu

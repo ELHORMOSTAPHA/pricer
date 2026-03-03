@@ -14,7 +14,7 @@ class ChatbotController extends Controller
     {
         $userMessage = $request->input('message');
         $description="Conexus IT accompagne les enseignes dans la digitalisation de l’étiquetage prix avec les solutions Pricer, de l’étude initiale jusqu’au support opérationnel. Nous réalisons l’audit et le dimensionnement du besoin, assurons le déploiement des étiquettes et des infrastructures, configurons les flux de mise à jour, puis formons les équipes pour une adoption rapide. Notre objectif : fiabiliser l’affichage, réduire les erreurs rayon/caisse, améliorer la productivité magasin et offrir une meilleure expérience client. Nous proposons aussi un accompagnement continu (maintenance, supervision, optimisation du parc et des coûts) pour garantir une exploitation durable et évolutive.";
-try {
+    try {
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . env('GROQ_API_KEY'),
             'Content-Type'  => 'application/json',
@@ -27,7 +27,7 @@ try {
                     'content' => 'You are a helpful assistant for Conexus IT Solutions. 
                                   Our company description: ' . $description . '
                                   Answer customer questions politely and concisely.
-                                  If you don\'t know something, ask them to contact us at contact@conexus-it.com.'
+                                  If you don\'t know something, ask them to contact us at g.darbane@conexusit.ma.'
                 ],
                 [
                     'role'    => 'user',
@@ -35,7 +35,7 @@ try {
                 ],
             ],
         ]);
-}catch (\Exception $e) {
+    }catch (\Exception $e) {
             return response()->json([
                 'reply' => 'Sorry, there was an error processing your request.',
                 'error' => $e->getMessage()
