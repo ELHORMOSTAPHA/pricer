@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Support_Mail;
+use App\Mail\Client_Mail;
 
 class ChatbotController extends Controller
 {
@@ -48,5 +51,35 @@ try {
     public function index()
     {
         return view('welcome');
+    }
+    public function contact(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $message = $request->input('message');
+        $telephone = $request->input('tel');
+        // Here you can implement logic to save the contact message to the database
+        // or send an email notification to the support team.
+        // send mail to support team
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'message' => $message,
+            'telephone' => $telephone
+        ];
+        //send mail to support team
+        Mail::to('mostapha.dev.elhor@gmail.com')->send(new Support_Mail($data));
+        // send mail to client
+        Mail::to($email)->send(new Client_Mail($data));
+        return response()->json([
+            'success' => true,
+            'message' => 'Thank you for contacting us! We will get back to you shortly.',
+            'data' => [
+                'name' => $name,
+                'email' => $email,
+                'message' => $message,
+                'telephone' => $telephone
+            ]
+        ]);
     }
 }

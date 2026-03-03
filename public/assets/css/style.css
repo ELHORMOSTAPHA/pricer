@@ -6008,7 +6008,7 @@ html:not(.js) .f-header__nav {
         all 0.57s cubic-bezier(0.5, 0.5, 0, 1),
         transform 0.5s cubic-bezier(0.5, 0.5, 0, 1);
 }
-.main-header__layout .main-header__default .menu-item > a:hover span::after {
+.main-header__layout .main-header__default .menu-item > .active span::after {
     transform: translateY(-50%) scale(1) rotate(0.001deg);
 }
 @media only screen and (min-width: 1023px) {
@@ -26213,18 +26213,14 @@ html:not(.js) .filter-nav__nav {
     gap: 0 24px;
     align-items: start;
     position: relative;
-}
-
-/* horizontal connector between cards */
-.steps-grid::before {
-    content: '';
-    position: absolute;
-    top: 26px; /* vertically centered on the pill */
-    left: calc(33.33% / 2);
-    right: calc(33.33% / 2);
-    height: 2px;
-    background: var(--color-primary);
-    z-index: 0;
+    background-image: linear-gradient(
+        to right,
+        var(--color-primary),
+        var(--color-primary)
+    );
+    background-repeat: no-repeat;
+    background-size: calc(100% - 33.33%) 2px;
+    background-position: center 26px;
 }
 
 /* ── STEP CARD ── */
@@ -26359,14 +26355,13 @@ html:not(.js) .filter-nav__nav {
 @media (max-width: 900px) {
     .steps-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-    .steps-grid::before {
-        display: none;
+        background-image: none;
     }
 }
 @media (max-width: 580px) {
     .steps-grid {
         grid-template-columns: 1fr;
+        background-image: none;
     }
 }
 
@@ -27732,4 +27727,242 @@ footer::before {
 .chat-footer span {
     color: #5be584;
     font-weight: 600;
+}
+
+/* ── OVERLAY ── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 20, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ── MODAL BOX ── */
+.modal-box {
+    background: var(--color-bg2);
+    border-radius: 22px;
+    width: 100%;
+    max-width: 440px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.modal-overlay.active .modal-box {
+    transform: scale(1) translateY(0);
+}
+
+/* top accent bar */
+.modal-bar {
+    height: 4px;
+    width: 100%;
+}
+.modal-bar--success {
+    background: linear-gradient(90deg, #4ade80, #22c55e, #4ade80);
+}
+.modal-bar--error {
+    background: linear-gradient(90deg, #f87171, #ef4444, #f87171);
+}
+
+/* ── MODAL INNER ── */
+.modal-inner {
+    padding: 36px 36px 32px;
+    text-align: center;
+}
+
+/* icon circle */
+.modal-icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.modal-icon-wrap--success {
+    background: rgba(74, 222, 128, 0.12);
+    border: 1.5px solid rgba(74, 222, 128, 0.3);
+}
+.modal-icon-wrap--error {
+    background: rgba(248, 113, 113, 0.1);
+    border: 1.5px solid rgba(248, 113, 113, 0.28);
+}
+
+/* ring pulse animation */
+.modal-icon-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1.5px solid;
+    opacity: 0;
+    animation: ring-pulse 2s ease-out infinite;
+}
+.modal-icon-wrap--success::before {
+    border-color: rgba(74, 222, 128, 0.4);
+}
+.modal-icon-wrap--error::before {
+    border-color: rgba(248, 113, 113, 0.35);
+}
+
+@keyframes ring-pulse {
+    0% {
+        inset: -8px;
+        opacity: 0.6;
+    }
+    100% {
+        inset: -22px;
+        opacity: 0;
+    }
+}
+
+/* checkmark / x draw animation */
+.icon-svg {
+    width: 32px;
+    height: 32px;
+}
+.icon-svg path,
+.icon-svg polyline,
+.icon-svg line {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: draw-icon 0.5s 0.2s ease forwards;
+}
+@keyframes draw-icon {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.modal-title {
+    font-family: 'Syne', 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.modal-text {
+    font-size: 0.86rem;
+    color: rgba(255, 255, 255, 0.48);
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+.modal-text strong {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── DETAIL PILL (success) ── */
+.modal-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(74, 222, 128, 0.08);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 20px;
+    padding: 7px 16px;
+    font-size: 0.78rem;
+    color: #4ade80;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+.detail-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 6px #4ade80;
+    flex-shrink: 0;
+}
+
+/* ── BUTTONS ── */
+.modal-actions {
+    display: flex;
+    gap: 10px;
+}
+.modal-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 11px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition:
+        opacity 0.2s,
+        transform 0.15s;
+}
+.modal-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+.modal-btn:active {
+    transform: translateY(0);
+}
+
+.modal-btn--primary-green {
+    background: var(--color-primary);
+    color: #0a1a0d;
+}
+.modal-btn--primary-red {
+    background: #f87171;
+    color: #1a0505;
+}
+.modal-btn--ghost {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── MOLECULE DECORATION ── */
+.modal-deco {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+/* ── DEMO TRIGGER BUTTONS ── */
+.demo-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #0f1520;
+    font-family: 'Segoe UI', sans-serif;
+}
+.demo-btn {
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+.demo-btn--s {
+    background: #4ade80;
+    color: #0a1a0d;
+}
+.demo-btn--e {
+    background: #f87171;
+    color: #fff;
 }

@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
-
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link
             rel="stylesheet"
@@ -99,7 +98,7 @@
                     >
                         <ul id="primary-menu-default" class="navbar-nav">
                             <li class="menu-item menu-item-has-children">
-                                <a href="index-four.html" title="Home">
+                                <a href="#accueil" title="Home">
                                     <span>Accueil</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
@@ -111,7 +110,7 @@
                             </ul> -->
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#why-pricer" title="Work">
+                                <a href="#pourquoi-pricer" title="Work">
                                     <span>Avantages</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
@@ -125,10 +124,7 @@
                             </ul> -->
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a
-                                    href="comment-ca-marche.html"
-                                    title="Stories"
-                                >
+                                <a href="#comment-ca-marche" title="Stories">
                                     <span>Comment ça marche</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
@@ -144,7 +140,7 @@
                             </ul> -->
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="cas-usage.html" title="Shop">
+                                <a href="#cas-usage" title="Shop">
                                     <span>Cas d'usage</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
@@ -156,7 +152,7 @@
                             </ul> -->
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="realisations.html" title="Contacts">
+                                <a href="#realisations" title="Contacts">
                                     <span>Réalisations</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
@@ -202,7 +198,7 @@
                                 <div class="ms-hc--inner">
                                     <a
                                         class="btn btn-mokko btn--sm btn--primary"
-                                        href="https://theme.madsparrow.me/mokko/portfolio-style-1/"
+                                        href="#contact"
                                     >
                                         <div class="ms-btn__text">
                                             Contacter
@@ -264,7 +260,7 @@
 
         <main class="ms-main">
             <div class="ms-page-content">
-                <section class="ms-hero hero-video d-block" id="4acfd10">
+                <section class="ms-hero hero-video d-block" id="accueil">
                     <div class="hero-overlay bg-gif"></div>
                     <div class="video-container">
                         <video
@@ -289,7 +285,7 @@
                         <div class="ms-hc--inner">
                             <a
                                 class="btn btn-mokko btn--sm btn--primary"
-                                href="https://theme.madsparrow.me/mokko/portfolio-style-1/"
+                                href="#film"
                             >
                                 <div class="ms-btn__text">
                                     Regardez le film en entier
@@ -317,6 +313,7 @@
                 <section
                     class="wrapper"
                     style="background-color: var(--color-bg1)"
+                    id="pourquoi-pricer"
                 >
                     <div
                         class="shape"
@@ -542,6 +539,7 @@
                 <section
                     class="wrapper text-white"
                     style="background-color: var(--color-bg2)"
+                    id="comment-ca-marche"
                 >
                     <div
                         class="shape"
@@ -687,9 +685,9 @@
                     <div class="ms-hc">
                         <div class="ms-hc--inner">
                             <h2 class="ms-hero-title">
-                                Over 15 years of experience
+                                Plus de 15 ans d'expérience
                                 <br />
-                                in the industry
+                                dans le secteur
                             </h2>
                         </div>
                     </div>
@@ -698,6 +696,7 @@
                 <section
                     class="wrapper"
                     style="background-color: var(--color-bg1)"
+                    id="cas-usage"
                 >
                     <div
                         class="shape"
@@ -864,6 +863,7 @@
                 <section
                     class="wrapper"
                     style="background-color: var(--color-bg2); color: white"
+                    id="realisations"
                 >
                     <div
                         class="shape"
@@ -1062,7 +1062,7 @@
                     </div>
                 </section>
                 <!-- ── VIDEO + FORM ── -->
-                <section class="contact-section">
+                <section class="contact-section" id="contact">
                     <!-- video background -->
                     <video
                         autoplay
@@ -1089,7 +1089,13 @@
                             passer par WhatsApp pour aller plus vite.
                         </p>
 
-                        <form style="position: relative">
+                        <form
+                            style="position: relative"
+                            action="{{ route('contact.submit') }}"
+                            method="POST"
+                            id="contact-form"
+                        >
+                            @csrf
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="nom">Nom &amp; prénom</label>
@@ -1099,8 +1105,16 @@
                                         name="nom"
                                         placeholder="Ex : Ghizlane Darbane"
                                     />
+                                    <small
+                                        id="nom-error"
+                                        class="field-error"
+                                        style="
+                                            color: #dc3545;
+                                            display: block;
+                                            margin-top: 6px;
+                                        "
+                                    ></small>
                                 </div>
-
                                 <div class="form-group">
                                     <label for="societe">Société</label>
                                     <input
@@ -1109,6 +1123,15 @@
                                         name="societe"
                                         placeholder="Ex : Nom de votre enseigne"
                                     />
+                                    <small
+                                        id="societe-error"
+                                        class="field-error"
+                                        style="
+                                            color: #dc3545;
+                                            display: block;
+                                            margin-top: 6px;
+                                        "
+                                    ></small>
                                 </div>
 
                                 <div class="form-group">
@@ -1168,6 +1191,15 @@
                                         name="tel"
                                         placeholder="Ex : +212 6XX XX XX XX"
                                     />
+                                    <small
+                                        id="tel-error"
+                                        class="field-error"
+                                        style="
+                                            color: #dc3545;
+                                            display: block;
+                                            margin-top: 6px;
+                                        "
+                                    ></small>
                                 </div>
 
                                 <div class="form-group">
@@ -1656,6 +1688,314 @@
             </div>
         </div>
 
+        <!-- ════════════════════════════════════════
+     SUCCESS MODAL
+════════════════════════════════════════ -->
+        <div
+            class="modal-overlay"
+            id="modal-success"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="success-title"
+        >
+            <div class="modal-box">
+                <div class="modal-bar modal-bar--success"></div>
+                <div
+                    class="modal-inner"
+                    style="position: relative; overflow: hidden"
+                >
+                    <!-- molecule deco -->
+                    <svg
+                        class="modal-deco"
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                    >
+                        <circle
+                            cx="20"
+                            cy="45"
+                            r="5"
+                            stroke="#4ade80"
+                            stroke-width="1.5"
+                        />
+                        <circle
+                            cx="70"
+                            cy="20"
+                            r="5"
+                            stroke="#4ade80"
+                            stroke-width="1.5"
+                        />
+                        <circle
+                            cx="70"
+                            cy="70"
+                            r="5"
+                            stroke="#4ade80"
+                            stroke-width="1.5"
+                        />
+                        <line
+                            x1="25"
+                            y1="43"
+                            x2="65"
+                            y2="22"
+                            stroke="#4ade80"
+                            stroke-width="1.2"
+                        />
+                        <line
+                            x1="25"
+                            y1="47"
+                            x2="65"
+                            y2="68"
+                            stroke="#4ade80"
+                            stroke-width="1.2"
+                        />
+                        <line
+                            x1="70"
+                            y1="25"
+                            x2="70"
+                            y2="65"
+                            stroke="#4ade80"
+                            stroke-width="1.2"
+                            stroke-dasharray="3 3"
+                        />
+                    </svg>
+
+                    <!-- icon -->
+                    <div class="modal-icon-wrap modal-icon-wrap--success">
+                        <svg
+                            class="icon-svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#4ade80"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </div>
+
+                    <h2 class="modal-title" id="success-title">
+                        Demande envoyée !
+                    </h2>
+                    <p class="modal-text">
+                        Merci
+                        <strong id="success-name"></strong>
+                        votre demande a bien été reçue. Notre équipe vous
+                        contactera dans les
+                        <strong>24 à 48h</strong>
+                        pour organiser votre démo personnalisée.
+                    </p>
+
+                    <div class="modal-detail">
+                        <span class="detail-dot"></span>
+                        Un email de confirmation vous a été envoyé
+                    </div>
+
+                    <div class="modal-actions">
+                        <button
+                            class="modal-btn modal-btn--ghost"
+                            onclick="closeModal('success')"
+                            aria-label="Fermer"
+                        >
+                            Fermer
+                        </button>
+                        <a
+                            href="https://wa.me/212600000000"
+                            class="modal-btn modal-btn--primary-green"
+                            style="
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 7px;
+                                text-decoration: none;
+                            "
+                            target="_blank"
+                        >
+                            <svg
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                />
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+     ERROR MODAL
+════════════════════════════════════════ -->
+        <div
+            class="modal-overlay"
+            id="modal-error"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="error-title"
+        >
+            <div class="modal-box">
+                <div class="modal-bar modal-bar--error"></div>
+                <div
+                    class="modal-inner"
+                    style="position: relative; overflow: hidden"
+                >
+                    <!-- molecule deco (red tint) -->
+                    <svg
+                        class="modal-deco"
+                        width="90"
+                        height="90"
+                        viewBox="0 0 90 90"
+                        fill="none"
+                    >
+                        <circle
+                            cx="20"
+                            cy="45"
+                            r="5"
+                            stroke="#f87171"
+                            stroke-width="1.5"
+                        />
+                        <circle
+                            cx="70"
+                            cy="20"
+                            r="5"
+                            stroke="#f87171"
+                            stroke-width="1.5"
+                        />
+                        <circle
+                            cx="70"
+                            cy="70"
+                            r="5"
+                            stroke="#f87171"
+                            stroke-width="1.5"
+                        />
+                        <line
+                            x1="25"
+                            y1="43"
+                            x2="65"
+                            y2="22"
+                            stroke="#f87171"
+                            stroke-width="1.2"
+                        />
+                        <line
+                            x1="25"
+                            y1="47"
+                            x2="65"
+                            y2="68"
+                            stroke="#f87171"
+                            stroke-width="1.2"
+                        />
+                        <line
+                            x1="70"
+                            y1="25"
+                            x2="70"
+                            y2="65"
+                            stroke="#f87171"
+                            stroke-width="1.2"
+                            stroke-dasharray="3 3"
+                        />
+                    </svg>
+
+                    <!-- icon -->
+                    <div class="modal-icon-wrap modal-icon-wrap--error">
+                        <svg
+                            class="icon-svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#f87171"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </div>
+
+                    <h2 class="modal-title" id="error-title">Erreur d'envoi</h2>
+                    <p class="modal-text">
+                        Désolé, une erreur est survenue lors de l'envoi de votre
+                        message. Veuillez réessayer ou nous contacter
+                        directement via WhatsApp ou email.
+                    </p>
+
+                    <!-- contact fallback -->
+                    <div
+                        style="
+                            background: rgba(248, 113, 113, 0.07);
+                            border: 1px solid rgba(248, 113, 113, 0.2);
+                            border-radius: 12px;
+                            padding: 14px 18px;
+                            margin-bottom: 28px;
+                            text-align: left;
+                        "
+                    >
+                        <p
+                            style="
+                                font-size: 0.75rem;
+                                color: rgba(255, 255, 255, 0.35);
+                                margin-bottom: 6px;
+                                text-transform: uppercase;
+                                letter-spacing: 0.06em;
+                                font-weight: 600;
+                            "
+                        >
+                            Contact direct
+                        </p>
+                        <a
+                            href="mailto:contact@conexus-it.ma"
+                            style="
+                                font-size: 0.85rem;
+                                color: #f87171;
+                                text-decoration: none;
+                                font-weight: 600;
+                                display: block;
+                                margin-bottom: 4px;
+                            "
+                        >
+                            contact
+                            @conexus-it.ma
+                        </a>
+                        <a
+                            href="tel:+212600000000"
+                            style="
+                                font-size: 0.85rem;
+                                color: rgba(255, 255, 255, 0.55);
+                                text-decoration: none;
+                            "
+                        >
+                            +212 6XX XX XX XX
+                        </a>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button
+                            class="modal-btn modal-btn--ghost"
+                            onclick="closeModal('error')"
+                        >
+                            Annuler
+                        </button>
+                        <button
+                            class="modal-btn modal-btn--primary-red"
+                            onclick="
+                                closeModal('error');
+                                document
+                                    .querySelector('form')
+                                    ?.dispatchEvent(new Event('retry'));
+                            "
+                        >
+                            Réessayer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--================= jquery latest version =================-->
         <script src="{{ asset('assets/js/vendor/jquery.min.js') }}"></script>
         <!--================= fslightbox JS =================-->
@@ -1704,6 +2044,101 @@
         <script src="{{ asset('assets/js/vendor/video-background.js') }}"></script>
         <!--================= Main JS =================-->
         <script src="{{ asset('assets/js/main.js') }}"></script>
+        <script>
+            (() => {
+                const navLinks = Array.from(
+                    document.querySelectorAll(
+                        '#primary-menu-default > li > a[href^="#"]'
+                    )
+                );
+
+                const sections = navLinks
+                    .map((link) => {
+                        const hash = link.getAttribute('href');
+                        if (!hash || hash === '#') return null;
+
+                        const section = document.querySelector(hash);
+                        if (!section) return null;
+
+                        return {
+                            hash,
+                            link,
+                            item: link.closest('li'),
+                            section,
+                        };
+                    })
+                    .filter(Boolean);
+                console.log('Detected sections for scroll spy:', sections);
+
+                if (!sections.length) return;
+
+                const setActive = (activeHash) => {
+                    sections.forEach(({ hash, link, item }) => {
+                        const isActive = hash === activeHash;
+                        link.classList.toggle('active', isActive);
+                        item?.classList.toggle('active', isActive);
+                        item?.classList.toggle('current_page_item', isActive);
+
+                        if (isActive) {
+                            link.setAttribute('aria-current', 'page');
+                        } else {
+                            link.removeAttribute('aria-current');
+                        }
+                    });
+                };
+
+                const detectActiveSection = () => {
+                    const header = document.getElementById('ms-header');
+                    const headerHeight = header?.offsetHeight || 0;
+                    const topSafeArea = headerHeight + 20;
+                    const viewportHeight = window.innerHeight;
+                    const detectionLine =
+                        topSafeArea + (viewportHeight - topSafeArea) * 0.35;
+                    let active = sections.find(({ section }) => {
+                        const rect = section.getBoundingClientRect();
+                        return (
+                            rect.top <= detectionLine &&
+                            rect.bottom >= detectionLine
+                        );
+                    });
+                    sections.forEach(({ link, item }) => {
+                        link.classList.remove('active');
+                        item?.classList.remove('active', 'current_page_item');
+                        link.removeAttribute('aria-current');
+                    });
+                    if (active) {
+                        setActive(active.hash);
+                    }
+                };
+
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+
+                    window.requestAnimationFrame(() => {
+                        detectActiveSection();
+                        ticking = false;
+                    });
+
+                    ticking = true;
+                };
+
+                navLinks.forEach((link) => {
+                    link.addEventListener('click', () => {
+                        const targetHash = link.getAttribute('href');
+                        if (targetHash && targetHash !== '#') {
+                            setActive(targetHash);
+                        }
+                    });
+                });
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                window.addEventListener('resize', detectActiveSection);
+                window.addEventListener('load', detectActiveSection);
+
+                detectActiveSection();
+            })();
+        </script>
         <script></script>
         <!--================= Script End Here =================-->
         <script></script>
@@ -1908,6 +2343,226 @@
                     .replace(/</g, '&lt;')
                     .replace(/>/g, '&gt;');
             }
+        </script>
+        <script>
+            function showModal(type, name = '') {
+                // inject client name into success message if provided
+                if (type === 'success' && name) {
+                    const el = document.getElementById('success-name');
+                    if (el) el.textContent = name + ', ';
+                }
+
+                const overlay = document.getElementById('modal-' + type);
+                if (!overlay) return;
+
+                // re-trigger icon draw animation by cloning paths
+                overlay
+                    .querySelectorAll(
+                        '.icon-svg path, .icon-svg polyline, .icon-svg line'
+                    )
+                    .forEach((el) => {
+                        el.style.animation = 'none';
+                        el.offsetHeight; // reflow
+                        el.style.animation = '';
+                    });
+
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // auto-close success after 6s
+                if (type === 'success') {
+                    setTimeout(() => closeModal('success'), 6000);
+                }
+            }
+
+            function closeModal(type) {
+                const overlay = document.getElementById('modal-' + type);
+                if (!overlay) return;
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                document.getEElementById('contact-form').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                });
+            }
+
+            // close on overlay click
+            document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                        document.getElementById('contact-form').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center',
+                        });
+                    }
+                });
+            });
+
+            // close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    document
+                        .querySelectorAll('.modal-overlay.active')
+                        .forEach((o) => {
+                            o.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    document.getElementById('contact-form').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                    });
+                }
+            });
+        </script>
+        <script>
+            document
+                .getElementById('contact-form')
+                .addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    let isValid = true;
+
+                    // Clear previous errors
+                    document
+                        .querySelectorAll('.field-error')
+                        .forEach((el) => (el.textContent = ''));
+                    document
+                        .querySelectorAll('input, textarea, select')
+                        .forEach((el) => (el.style.borderColor = ''));
+
+                    // ── Nom & Prénom (required) ──────────────────────────────
+                    const nom = document.getElementById('nom');
+                    const nomError = document.getElementById('nom-error');
+                    if (!nom.value.trim()) {
+                        nomError.appendChild(
+                            document.createTextNode('Le nom est obligatoire.')
+                        );
+                        nom.style.borderColor = '#dc3545';
+                        isValid = false;
+                    }
+
+                    // ── Téléphone (required + Moroccan format) ───────────────
+                    const tel = document.getElementById('tel');
+                    const telError = document.getElementById('tel-error');
+                    // Accepts: 06XXXXXXXX | 07XXXXXXXX | 05XXXXXXXX
+                    // Also accepts international: +2126... / 002126...
+                    const moroccanRegex =
+                        /^(?:0[567]\d{8}|(?:\+212|00212)[567]\d{8})$/;
+                    const telClean = tel.value.trim().replace(/\s+/g, '');
+                    console.log('Cleaned phone:', telClean);
+                    if (!telClean) {
+                        telError.textContent =
+                            'Le numéro de téléphone est obligatoire.';
+                        tel.style.borderColor = '#dc3545';
+                        isValid = false;
+                    } else if (!moroccanRegex.test(telClean)) {
+                        telError.textContent =
+                            'Numéro invalide. Il doit commencer par 05, 06 ou 07 (ex: 0612345678).';
+                        tel.style.borderColor = '#dc3545';
+                        isValid = false;
+                    }
+
+                    // ── Email (required + format) ────────────────────────────
+                    const email = document.getElementById('email');
+                    // Add error small tag dynamically if it doesn't exist
+                    let emailError = document.getElementById('email-error');
+                    if (!emailError) {
+                        emailError = document.createElement('small');
+                        emailError.id = 'email-error';
+                        emailError.className = 'field-error';
+                        emailError.style.cssText =
+                            'color:#dc3545; display:block; margin-top:6px;';
+                        email.insertAdjacentElement('afterend', emailError);
+                    }
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim()) {
+                        emailError.textContent =
+                            "L'adresse email est obligatoire.";
+                        email.style.borderColor = '#dc3545';
+                        isValid = false;
+                    } else if (!emailRegex.test(email.value.trim())) {
+                        emailError.textContent =
+                            "L'adresse email n'est pas valide.";
+                        email.style.borderColor = '#dc3545';
+                        isValid = false;
+                    }
+
+                    // ── Block submit if invalid ──────────────────────────────
+                    if (!isValid) {
+                        // Scroll to first error
+                        const firstError = document.querySelector(
+                            '.field-error:not(:empty)'
+                        );
+                        if (firstError)
+                            firstError.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center',
+                            });
+                    } else {
+                        //prepare data as an object
+                        const formData = {
+                            nom: nom.value.trim() || null,
+                            societe:
+                                document
+                                    .getElementById('societe')
+                                    .value.trim() || null,
+                            tel: tel.value.trim() || null,
+                            email: email.value.trim() || null,
+                            message:
+                                document
+                                    .getElementById('message')
+                                    .value.trim() || null,
+                            ville:
+                                document.getElementById('ville').value.trim() ||
+                                null,
+                            type:
+                                document.getElementById('type').value.trim() ||
+                                null,
+                            surface:
+                                document
+                                    .getElementById('surface')
+                                    .value.trim() || null,
+                            etiquettes:
+                                document
+                                    .getElementById('etiquettes')
+                                    .value.trim() || null,
+                        };
+                        fetch('/contact', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN':
+                                    document.querySelector(
+                                        'meta[name="csrf-token"]'
+                                    )?.content || '',
+                            },
+                            body: JSON.stringify(formData),
+                        })
+                            .then((res) => {
+                                if (res.ok) {
+                                    showModal('success', formData.name);
+                                    this.reset();
+                                } else {
+                                    throw new Error('Erreur lors de l’envoi.');
+                                }
+                            })
+                            .catch(() => {
+                                showModal('error');
+                            });
+                    }
+                });
+
+            // ── Live feedback: clear error on input ─────────────────────
+            ['nom', 'tel', 'email'].forEach((id) => {
+                const el = document.getElementById(id);
+                el.addEventListener('input', function () {
+                    this.style.borderColor = '';
+                    const err = document.getElementById(`${id}-error`);
+                    if (err) err.textContent = '';
+                });
+            });
         </script>
     </body>
 </html>
