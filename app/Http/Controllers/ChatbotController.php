@@ -28,7 +28,7 @@ class ChatbotController extends Controller
                     'content' => 'You are a helpful assistant for Conexus IT Solutions. 
                                   Our company description: ' . $description . '
                                   Answer customer questions politely and concisely.
-                                  If you don\'t know something, ask them to contact us at g.darbane@conexusit.ma.'
+                                  If you don\'t know something, ask them to contact us at g.darbane@conexusit.ma or by phone +212 661-220585.'
                 ],
                 [
                     'role'    => 'user',
@@ -46,7 +46,7 @@ class ChatbotController extends Controller
         $data = $response->json();
 
         return response()->json([
-            'reply' => "salam" // $data['choices'][0]['message']['content'] ?? 'Sorry, I couldn\'t generate a response.'
+            'reply' => $data['choices'][0]['message']['content'] ?? 'Sorry, I couldn\'t generate a response.'
         ]);
     }
     public function index()
@@ -61,7 +61,7 @@ class ChatbotController extends Controller
             'ville' => ['nullable', 'string', 'max:255'],
             'type' => ['nullable', 'string', 'max:255'],
             'surface' => ['nullable', 'string', 'max:255'],
-            'etiquettes' => ['nullable', 'string', 'max:255'],
+            'etiquettes' => ['nullable',  'string', 'max:255'],
             'tel' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
             'message' => ['nullable', 'string'],

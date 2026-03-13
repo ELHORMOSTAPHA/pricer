@@ -334,17 +334,12 @@
                             </span>
                             ?
                         </h1>
-                        <p>
-                            <span>
-                                <i
-                                    class="fa-solid fa-arrow-down"
-                                    style="transform: rotate(-90deg)"
-                                ></i>
-                            </span>
-                            Un impact direct sur le quotidien magasin :
-                            fiabilité opérationnelle, productivité et cohérence
-                            prix rayon/caisse.
-                        </p>
+                        
+                            <p class="typing-paragraph" data-typing-text="Un impact direct sur le quotidien magasin : fiabilité opérationnelle, productivité et cohérence prix rayon/caisse.">
+                            Un impact direct sur le quotidien magasin : fiabilité opérationnelle, productivité et cohérence prix rayon/caisse.
+
+                            </p>
+
                     </div>
                     <!-- cards grid -->
                     <div class="why-pricer-grid">
@@ -539,6 +534,106 @@
                             </p>
                         </div>
                     </div>
+                    <div class="experience-layout">
+                <!-- Image / SVG masked thumbnail -->
+                <div class="experience-thumbnail">
+                    <span class="experience-outline"></span>
+                    <figure class="experience-stack-grid">
+                        <div class="experience-stack-item experience-stack-bg">
+                            <svg
+                                viewBox="0 0 846 629"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M463 0V311C463 349.66 494.34 381 533 381H846V394H713C674.34 394 643 425.34 643 464V629H630V464C630 425.34 598.66 394 560 394H250C211.34 394 180 425.34 180 464V629H0V311C0 349.66 31.3401 381 70 381H380C418.66 381 450 349.66 450 311V0H463Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+
+                        <svg
+                            class="experience-stack-item experience-stack-foreground"
+                            viewBox="0 0 846 629"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid meet"
+                        >
+                            <defs>
+                                <mask id="pixelMask-experience">
+                                    <rect
+                                        x="0"
+                                        y="0"
+                                        width="100%"
+                                        height="100%"
+                                        fill="black"
+                                    />
+                                    <path
+                                        d="M180 464C180 425.34 211.34 394 250 394H560C598.66 394 630 425.34 630 464V629H180V464Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M643 464C643 425.34 674.34 394 713 394H846V629H643V464Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M0 0H450V311C450 349.66 418.66 381 380 381H70C31.3401 381 0 349.66 0 311V0Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M463 0H846V381H533C494.34 381 463 349.66 463 311V0Z"
+                                        fill="white"
+                                    />
+                                </mask>
+                            </defs>
+
+                            <foreignObject
+                                x="0"
+                                y="0"
+                                width="100%"
+                                height="100%"
+                                mask="url(#pixelMask-experience)"
+                            >
+                                <div
+                                    xmlns="http://www.w3.org/1999/xhtml"
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: transparent;
+                                    "
+                                >
+                                    <img
+                                        src="{{ asset('assets/media/images/realisations/intersport.jpg') }}"
+                                        alt="Improve shopping experience with ESL"
+                                        style="
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            aspect-ratio: 846/629;
+                                        "
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </foreignObject>
+                        </svg>
+                    </figure>
+                </div>
+
+                <!-- Text content -->
+                <div class="experience-content">
+                    <h2 class="experience-title">Améliorer l'expérience d'achat</h2>
+                    <p class="experience-body">
+                    L’étagère n’est plus seulement un simple affichage de prix — c’est désormais un canal dynamique d’engagement, de branding et de storytelling.
+                    Avec les étiquettes électroniques Pricer ESL, chaque étiquette devient un point de contact pour guider, rassurer et inspirer vos clients.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">
+                        En savoir plus
+                    </a>
+                </div>
+
+                <div class="experience-bg"></div>
+            </div>
                 </section>
                 <!-- Comment ça marche -->
                 <section
@@ -552,14 +647,14 @@
                             background-image: url('{{ asset('assets/images/shapes/shape1.svg') }}');
                         "
                     ></div>
-                    <div class="appear" style="margin-bottom: 60px">
-                        <h1 class="wrapper-title text-white">
+                    <div style="margin-bottom: 60px">
+                        <h1 class=" wrapper-title text-white">
                             Comment
                             <span style="color: var(--color-primary)">
                                 ça marche
                             </span>
                         </h1>
-                        <p>
+                        <p class="typing-paragraph" data-typing-text="Découvrez comment nous avons transformé les opérations de nos clients grâce à des solutions innovantes et adaptées à leurs besoins spécifiques.">
                             Découvrez comment nous avons transformé les
                             opérations de nos clients grâce à des solutions
                             innovantes et adaptées à leurs besoins spécifiques.
@@ -690,9 +785,9 @@
                     <div class="ms-hc">
                         <div class="ms-hc--inner">
                             <h2 class="ms-hero-title">
-                                Plus de 15 ans d'expérience
+                                Plus de 10 ans d'expérience
                                 <br />
-                                dans le secteur
+                                dans la digitalisation
                             </h2>
                         </div>
                     </div>
@@ -709,161 +804,535 @@
                             background-image: url('{{ asset('assets/images/shapes/shape2.svg') }}');
                         "
                     ></div>
-                    <div class="appear">
+                    <div class="">
                         <h1 class="wrapper-title">Cas d'usage</h1>
-                        <p>
+                        <p class="typing-paragraph" data-typing-text="Des scénarios concrets adaptés aux besoins terrain.">
                             Des scénarios concrets adaptés aux besoins terrain.
                         </p>
                     </div>
 
-                    <!-- grid -->
-                    <div class="usage-grid">
+                    <div class="usecase-list">
                         <!-- 1 — Pharmacies -->
-                        <div class="usage-card">
-                            <div class="card-icon">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"
-                                    />
-                                    <path d="M12 8v8M8 12h8" />
-                                </svg>
+                        <div class="experience-layout usecase-layout">
+                            <div class="experience-thumbnail">
+                                <span class="experience-outline"></span>
+                                <figure class="experience-stack-grid">
+                                    <div
+                                        class="experience-stack-item experience-stack-bg"
+                                    >
+                                        <svg
+                                            viewBox="0 0 846 629"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M463 0V311C463 349.66 494.34 381 533 381H846V394H713C674.34 394 643 425.34 643 464V629H630V464C630 425.34 598.66 394 560 394H250C211.34 394 180 425.34 180 464V629H0V311C0 349.66 31.3401 381 70 381H380C418.66 381 450 349.66 450 311V0H463Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <svg
+                                        class="experience-stack-item experience-stack-foreground"
+                                        viewBox="0 0 846 629"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMidYMid meet"
+                                    >
+                                        <defs>
+                                            <mask
+                                                id="pixelMask-usecase-1"
+                                            >
+                                                <rect
+                                                    x="0"
+                                                    y="0"
+                                                    width="100%"
+                                                    height="100%"
+                                                    fill="black"
+                                                />
+                                                <path
+                                                    d="M180 464C180 425.34 211.34 394 250 394H560C598.66 394 630 425.34 630 464V629H180V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M643 464C643 425.34 674.34 394 713 394H846V629H643V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M0 0H450V311C450 349.66 418.66 381 380 381H70C31.3401 381 0 349.66 0 311V0Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M463 0H846V381H533C494.34 381 463 349.66 463 311V0Z"
+                                                    fill="white"
+                                                />
+                                            </mask>
+                                        </defs>
+                                        <foreignObject
+                                            x="0"
+                                            y="0"
+                                            width="100%"
+                                            height="100%"
+                                            mask="url(#pixelMask-usecase-1)"
+                                        >
+                                            <div
+                                                xmlns="http://www.w3.org/1999/xhtml"
+                                                style="
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-color: transparent;
+                                                "
+                                            >
+                                                <img
+                                                    src="{{ asset('assets/media/images/realisations/pharmacie.jpg') }}"
+                                                    alt="Pharmacie avec ESL"
+                                                    style="
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;
+                                                        aspect-ratio: 846/629;
+                                                    "
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </foreignObject>
+                                    </svg>
+                                </figure>
                             </div>
-                            <div class="card-title">
-                                Pharmacies &amp; parapharmacies
+                            <div class="experience-content">
+                                <h2 class="experience-title">
+                                    Pharmacies &amp; parapharmacies
+                                </h2>
+                                <p class="experience-body">
+                                    Affichage clair, mise à jour rapide des
+                                    promotions et gain de temps en période de
+                                    rush.
+                                </p>
+                                <span class="usecase-tag">
+                                    Santé &amp; beauté
+                                </span>
                             </div>
-                            <p class="card-text">
-                                Affichage clair, mise à jour rapide des
-                                promotions et gain de temps en période de rush.
-                            </p>
-                            <span class="card-tag">Santé &amp; beauté</span>
+                            <div class="experience-bg"></div>
                         </div>
 
-                        <!-- 2 — Supermarchés -->
-                        <div class="usage-card">
-                            <div class="card-icon">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
-                                    />
-                                    <line x1="3" y1="6" x2="21" y2="6" />
-                                    <path d="M16 10a4 4 0 0 1-8 0" />
-                                </svg>
-                            </div>
-                            <div class="card-title">Supermarchés</div>
-                            <p class="card-text">
-                                Gestion des changements massifs, promotions,
-                                rayons à forte rotation et cohérence entre le
-                                rayon et la caisse.
-                            </p>
-                            <span class="card-tag">Grande distribution</span>
-                        </div>
-
-                        <!-- 3 — Magasins spécialisés (dark) -->
-                        <div class="usage-card usage-card--dark">
-                            <div class="card-icon">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <rect
-                                        x="2"
-                                        y="3"
-                                        width="20"
-                                        height="14"
-                                        rx="2"
-                                    />
-                                    <line x1="8" y1="21" x2="16" y2="21" />
-                                    <line x1="12" y1="17" x2="12" y2="21" />
-                                </svg>
-                            </div>
-                            <div class="card-title">Magasins spécialisés</div>
-                            <p class="card-text">
-                                Électroménager, bricolage, décoration…
-                                informations prix et promotions alignées et
-                                faciles à piloter.
-                            </p>
-                            <span class="card-tag">Spécialisé</span>
-                        </div>
-
-                        <!-- 4 — Optimisation étiquettes (wide, dark) -->
+                        <!-- 2 — Supermarchés (reversed) -->
                         <div
-                            class="usage-card usage-card--dark usage-card--wide"
+                            class="experience-layout usecase-layout usecase-layout--reverse"
                         >
-                            <div class="card-icon">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <polyline
-                                        points="22 12 18 12 15 21 9 3 6 12 2 12"
-                                    />
-                                </svg>
+                            <div class="experience-thumbnail">
+                                <span class="experience-outline"></span>
+                                <figure class="experience-stack-grid">
+                                    <div
+                                        class="experience-stack-item experience-stack-bg"
+                                    >
+                                        <svg
+                                            viewBox="0 0 846 629"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M463 0V311C463 349.66 494.34 381 533 381H846V394H713C674.34 394 643 425.34 643 464V629H630V464C630 425.34 598.66 394 560 394H250C211.34 394 180 425.34 180 464V629H0V311C0 349.66 31.3401 381 70 381H380C418.66 381 450 349.66 450 311V0H463Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <svg
+                                        class="experience-stack-item experience-stack-foreground"
+                                        viewBox="0 0 846 629"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMidYMid meet"
+                                    >
+                                        <defs>
+                                            <mask
+                                                id="pixelMask-usecase-2"
+                                            >
+                                                <rect
+                                                    x="0"
+                                                    y="0"
+                                                    width="100%"
+                                                    height="100%"
+                                                    fill="black"
+                                                />
+                                                <path
+                                                    d="M180 464C180 425.34 211.34 394 250 394H560C598.66 394 630 425.34 630 464V629H180V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M643 464C643 425.34 674.34 394 713 394H846V629H643V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M0 0H450V311C450 349.66 418.66 381 380 381H70C31.3401 381 0 349.66 0 311V0Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M463 0H846V381H533C494.34 381 463 349.66 463 311V0Z"
+                                                    fill="white"
+                                                />
+                                            </mask>
+                                        </defs>
+                                        <foreignObject
+                                            x="0"
+                                            y="0"
+                                            width="100%"
+                                            height="100%"
+                                            mask="url(#pixelMask-usecase-2)"
+                                        >
+                                            <div
+                                                xmlns="http://www.w3.org/1999/xhtml"
+                                                style="
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-color: transparent;
+                                                "
+                                            >
+                                                <img
+                                                    src="{{ asset('assets/media/images/realisations/supermarche.jpg') }}"
+                                                    alt="Supermarché avec ESL"
+                                                    style="
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;
+                                                        aspect-ratio: 846/629;
+                                                    "
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </foreignObject>
+                                    </svg>
+                                </figure>
                             </div>
-                            <div class="card-title">
-                                Optimisation du nombre d'étiquettes
+                            <div class="experience-content">
+                                <h2 class="experience-title">Supermarchés</h2>
+                                <p class="experience-body">
+                                    Gestion des changements massifs,
+                                    promotions, rayons à forte rotation et
+                                    cohérence entre le rayon et la caisse.
+                                </p>
+                                <span class="usecase-tag">
+                                    Grande distribution
+                                </span>
                             </div>
-                            <p class="card-text">
-                                Pour optimiser le budget, il est possible (selon
-                                la configuration du rayon) de déployer une
-                                étiquette pour deux produits. Une optimisation
-                                encore plus poussée peut être envisagée avec des
-                                formats permettant d'afficher jusqu'à quatre
-                                produits. Ces optimisations se valident après
-                                une étude terrain et la définition du périmètre
-                                (linéaire, lisibilité, typologie de produits).
-                            </p>
-                            <span class="card-tag">Budget &amp; ROI</span>
+                            <div class="experience-bg"></div>
+                        </div>
+
+                        <!-- 3 — Magasins spécialisés -->
+                        <div class="experience-layout usecase-layout">
+                            <div class="experience-thumbnail">
+                                <span class="experience-outline"></span>
+                                <figure class="experience-stack-grid">
+                                    <div
+                                        class="experience-stack-item experience-stack-bg"
+                                    >
+                                        <svg
+                                            viewBox="0 0 846 629"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M463 0V311C463 349.66 494.34 381 533 381H846V394H713C674.34 394 643 425.34 643 464V629H630V464C630 425.34 598.66 394 560 394H250C211.34 394 180 425.34 180 464V629H0V311C0 349.66 31.3401 381 70 381H380C418.66 381 450 349.66 450 311V0H463Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <svg
+                                        class="experience-stack-item experience-stack-foreground"
+                                        viewBox="0 0 846 629"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMidYMid meet"
+                                    >
+                                        <defs>
+                                            <mask
+                                                id="pixelMask-usecase-3"
+                                            >
+                                                <rect
+                                                    x="0"
+                                                    y="0"
+                                                    width="100%"
+                                                    height="100%"
+                                                    fill="black"
+                                                />
+                                                <path
+                                                    d="M180 464C180 425.34 211.34 394 250 394H560C598.66 394 630 425.34 630 464V629H180V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M643 464C643 425.34 674.34 394 713 394H846V629H643V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M0 0H450V311C450 349.66 418.66 381 380 381H70C31.3401 381 0 349.66 0 311V0Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M463 0H846V381H533C494.34 381 463 349.66 463 311V0Z"
+                                                    fill="white"
+                                                />
+                                            </mask>
+                                        </defs>
+                                        <foreignObject
+                                            x="0"
+                                            y="0"
+                                            width="100%"
+                                            height="100%"
+                                            mask="url(#pixelMask-usecase-3)"
+                                        >
+                                            <div
+                                                xmlns="http://www.w3.org/1999/xhtml"
+                                                style="
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-color: transparent;
+                                                "
+                                            >
+                                                <img
+                                                    src="{{ asset('assets/media/images/realisations/specialise.png') }}"
+                                                    alt="Magasin spécialisé avec ESL"
+                                                    style="
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;
+                                                        aspect-ratio: 846/629;
+                                                    "
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </foreignObject>
+                                    </svg>
+                                </figure>
+                            </div>
+                            <div class="experience-content">
+                                <h2 class="experience-title">
+                                    Magasins spécialisés
+                                </h2>
+                                <p class="experience-body">
+                                    Électroménager, bricolage, décoration…
+                                    informations prix et promotions alignées et
+                                    faciles à piloter.
+                                </p>
+                                <span class="usecase-tag">Spécialisé</span>
+                            </div>
+                            <div class="experience-bg"></div>
+                        </div>
+
+                        <!-- 4 — Optimisation du nombre d'étiquettes (reversed) -->
+                        <div
+                            class="experience-layout usecase-layout usecase-layout--reverse"
+                        >
+                            <div class="experience-thumbnail">
+                                <span class="experience-outline"></span>
+                                <figure class="experience-stack-grid">
+                                    <div
+                                        class="experience-stack-item experience-stack-bg"
+                                    >
+                                        <svg
+                                            viewBox="0 0 846 629"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M463 0V311C463 349.66 494.34 381 533 381H846V394H713C674.34 394 643 425.34 643 464V629H630V464C630 425.34 598.66 394 560 394H250C211.34 394 180 425.34 180 464V629H0V311C0 349.66 31.3401 381 70 381H380C418.66 381 450 349.66 450 311V0H463Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <svg
+                                        class="experience-stack-item experience-stack-foreground"
+                                        viewBox="0 0 846 629"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMidYMid meet"
+                                    >
+                                        <defs>
+                                            <mask
+                                                id="pixelMask-usecase-4"
+                                            >
+                                                <rect
+                                                    x="0"
+                                                    y="0"
+                                                    width="100%"
+                                                    height="100%"
+                                                    fill="black"
+                                                />
+                                                <path
+                                                    d="M180 464C180 425.34 211.34 394 250 394H560C598.66 394 630 425.34 630 464V629H180V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M643 464C643 425.34 674.34 394 713 394H846V629H643V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M0 0H450V311C450 349.66 418.66 381 380 381H70C31.3401 381 0 349.66 0 311V0Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M463 0H846V381H533C494.34 381 463 349.66 463 311V0Z"
+                                                    fill="white"
+                                                />
+                                            </mask>
+                                        </defs>
+                                        <foreignObject
+                                            x="0"
+                                            y="0"
+                                            width="100%"
+                                            height="100%"
+                                            mask="url(#pixelMask-usecase-4)"
+                                        >
+                                            <div
+                                                xmlns="http://www.w3.org/1999/xhtml"
+                                                style="
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-color: transparent;
+                                                "
+                                            >
+                                                <img
+                                                    src="{{ asset('assets/media/images/realisations/optimisation.jpeg') }}"
+                                                    alt="Optimisation du nombre d'étiquettes"
+                                                    style="
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;
+                                                        aspect-ratio: 846/629;
+                                                    "
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </foreignObject>
+                                    </svg>
+                                </figure>
+                            </div>
+                            <div class="experience-content">
+                                <h2 class="experience-title">
+                                    Optimisation du nombre d'étiquettes
+                                </h2>
+                                <p class="experience-body">
+                                    Pour optimiser le budget, il est possible
+                                    (selon la configuration du rayon) de
+                                    déployer une étiquette pour deux produits.
+                                    Une optimisation encore plus poussée peut
+                                    être envisagée avec des formats permettant
+                                    d'afficher jusqu'à quatre produits. Ces
+                                    optimisations se valident après une étude
+                                    terrain et la définition du périmètre
+                                    (linéaire, lisibilité, typologie de
+                                    produits).
+                                </p>
+                                <span class="usecase-tag">Budget &amp; ROI</span>
+                            </div>
+                            <div class="experience-bg"></div>
                         </div>
 
                         <!-- 5 — Rails & supports -->
-                        <div class="usage-card">
-                            <div class="card-icon">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <line x1="3" y1="6" x2="21" y2="6" />
-                                    <line x1="3" y1="12" x2="21" y2="12" />
-                                    <line x1="3" y1="18" x2="21" y2="18" />
-                                </svg>
+                        <div class="experience-layout usecase-layout">
+                            <div class="experience-thumbnail">
+                                <span class="experience-outline"></span>
+                                <figure class="experience-stack-grid">
+                                    <div
+                                        class="experience-stack-item experience-stack-bg"
+                                    >
+                                        <svg
+                                            viewBox="0 0 846 629"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M463 0V311C463 349.66 494.34 381 533 381H846V394H713C674.34 394 643 425.34 643 464V629H630V464C630 425.34 598.66 394 560 394H250C211.34 394 180 425.34 180 464V629H0V311C0 349.66 31.3401 381 70 381H380C418.66 381 450 349.66 450 311V0H463Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <svg
+                                        class="experience-stack-item experience-stack-foreground"
+                                        viewBox="0 0 846 629"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMidYMid meet"
+                                    >
+                                        <defs>
+                                            <mask
+                                                id="pixelMask-usecase-5"
+                                            >
+                                                <rect
+                                                    x="0"
+                                                    y="0"
+                                                    width="100%"
+                                                    height="100%"
+                                                    fill="black"
+                                                />
+                                                <path
+                                                    d="M180 464C180 425.34 211.34 394 250 394H560C598.66 394 630 425.34 630 464V629H180V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M643 464C643 425.34 674.34 394 713 394H846V629H643V464Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M0 0H450V311C450 349.66 418.66 381 380 381H70C31.3401 381 0 349.66 0 311V0Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M463 0H846V381H533C494.34 381 463 349.66 463 311V0Z"
+                                                    fill="white"
+                                                />
+                                            </mask>
+                                        </defs>
+                                        <foreignObject
+                                            x="0"
+                                            y="0"
+                                            width="100%"
+                                            height="100%"
+                                            mask="url(#pixelMask-usecase-5)"
+                                        >
+                                            <div
+                                                xmlns="http://www.w3.org/1999/xhtml"
+                                                style="
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-color: transparent;
+                                                "
+                                            >
+                                                <img
+                                                    src="{{ asset('assets/media/images/realisations/rails.webp') }}"
+                                                    alt="Rails et supports pour ESL"
+                                                    style="
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;
+                                                        aspect-ratio: 846/629;
+                                                    "
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </foreignObject>
+                                    </svg>
+                                </figure>
                             </div>
-                            <div class="card-title">Rails &amp; supports</div>
-                            <p class="card-text">
-                                Les rails et supports adaptés peuvent être
-                                fournis via nos partenaires au Maroc. Un devis
-                                complémentaire est établi selon le métrage et le
-                                type de linéaire.
-                            </p>
-                            <span class="card-tag">Infrastructure</span>
+                            <div class="experience-content">
+                                <h2 class="experience-title">
+                                    Rails &amp; supports
+                                </h2>
+                                <p class="experience-body">
+                                    Les rails et supports adaptés peuvent être
+                                    fournis via nos partenaires au Maroc. Un
+                                    devis complémentaire est établi selon le
+                                    métrage et le type de linéaire.
+                                </p>
+                                <span class="usecase-tag">Infrastructure</span>
+                            </div>
+                            <div class="experience-bg"></div>
                         </div>
                     </div>
                 </section>
+                <!-- realisations -->
                 <!-- realisations -->
                 <section
                     class="wrapper"
@@ -878,169 +1347,342 @@
                     ></div>
                     <div class="appear">
                         <h1 class="wrapper-title text-white">Réalisations</h1>
-                        <p>
-                            Remplace les liens ci-dessous par tes 2 liens vers
-                            des réalisations Pricer dans le monde.
-                        </p>
                     </div>
-
-                    <div class="realisations-grid">
-                        <!-- LEFT — Inspiration & références -->
-                        <div class="panel">
-                            <div class="panel-title">
-                                Inspiration &amp; références
+                    <div></div>
+                    <!-- Case Study Cards -->
+                    <div class="case-study-grid appear">
+                        <!-- Card 1 — Intersport -->
+                        <div class="case-study-card">
+                            <div class="case-study-img-wrap">
+                                <img
+                                    src="{{ asset('assets/media/images/realisations/intersport.jpg') }}"
+                                    alt="Intersport – ESL Pricer"
+                                    class="case-study-img"
+                                />
                             </div>
-                            <p class="panel-subtitle">
-                                Découvrez des déploiements Pricer dans des
-                                réseaux retail exigeants et observez les gains
-                                opérationnels possibles.
-                            </p>
-
-                            <div class="link-list">
-                                <a href="#" class="link-row">
-                                    <div class="link-row-left">
-                                        <span class="link-icon">
-                                            <svg
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <path
-                                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-                                                />
-                                                <path
-                                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-                                                />
-                                            </svg>
-                                        </span>
-                                        Réalisation Pricer #1 (à remplacer)
-                                    </div>
-                                    <span class="arrow-icon">
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <line
-                                                x1="5"
-                                                y1="12"
-                                                x2="19"
-                                                y2="12"
-                                            />
-                                            <polyline
-                                                points="12 5 19 12 12 19"
-                                            />
-                                        </svg>
-                                    </span>
+                            <div class="case-study-body">
+                                <h3 class="case-study-title">
+                                    Intersport améliore l'expérience client avec
+                                    les ESL Pricer
+                                </h3>
+                                <p class="case-study-desc">
+                                    Du manuel au moderne — mises à jour plus
+                                    rapides, opérations plus fluides. Découvrez
+                                    comment INTERSPORT optimise le service en
+                                    magasin avec des étiquettes intelligentes.
+                                </p>
+                                <a href="#" class="case-study-btn">
+                                    Voir l'étude de cas
                                 </a>
-
-                                <a href="#" class="link-row">
-                                    <div class="link-row-left">
-                                        <span class="link-icon">
-                                            <svg
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <path
-                                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-                                                />
-                                                <path
-                                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-                                                />
-                                            </svg>
-                                        </span>
-                                        Réalisation Pricer #2 (à remplacer)
-                                    </div>
-                                    <span class="arrow-icon">
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <line
-                                                x1="5"
-                                                y1="12"
-                                                x2="19"
-                                                y2="12"
-                                            />
-                                            <polyline
-                                                points="12 5 19 12 12 19"
-                                            />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="tip">
-                                <span class="tip-dot"></span>
-                                Astuce : tu peux ajouter une galerie photos ESL
-                                (Elementor) juste au-dessus.
                             </div>
                         </div>
 
-                        <!-- RIGHT — Notre accompagnement -->
-                        <div class="panel">
-                            <div class="panel-title">Notre accompagnement</div>
-                            <p class="panel-subtitle">
-                                Conexus IT gère le projet de bout en bout :
-                            </p>
+                        <!-- Card 2 — PLUS -->
+                        <div class="case-study-card">
+                            <div class="case-study-img-wrap">
+                                <img
+                                    src="{{ asset('assets/media/images/realisations/leclerc.jpg') }}"
+                                    alt="PLUS – ESL Pricer"
+                                    class="case-study-img"
+                                />
+                            </div>
+                            <div class="case-study-body">
+                                <h3 class="case-study-title">
+                                    PLUS propulse la plateforme ESL au niveau
+                                    supérieur
+                                </h3>
+                                <p class="case-study-desc">
+                                    Au-delà du prix : contrôle en temps réel et
+                                    rapidité opérationnelle. Découvrez comment
+                                    PLUS exploite tout le potentiel des
+                                    étiquettes digitales.
+                                </p>
+                                <a href="#" class="case-study-btn">
+                                    Voir l'étude de cas
+                                </a>
+                            </div>
+                        </div>
 
-                            <div class="accomp-list">
-                                <div class="accomp-item">
-                                    <div class="accomp-bar"></div>
-                                    <div class="accomp-body">
-                                        <div class="accomp-title">
-                                            Étude &amp; cadrage
-                                        </div>
-                                        <div class="accomp-text">
-                                            Audit, dimensionnement, planning et
-                                            périmètre.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accomp-item">
-                                    <div class="accomp-bar"></div>
-                                    <div class="accomp-body">
-                                        <div class="accomp-title">
-                                            Fourniture &amp; installation
-                                        </div>
-                                        <div class="accomp-text">
-                                            ESL, stations, accessoires, pose et
-                                            configuration.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accomp-item">
-                                    <div class="accomp-bar"></div>
-                                    <div class="accomp-body">
-                                        <div class="accomp-title">
-                                            Formation &amp; support
-                                        </div>
-                                        <div class="accomp-text">
-                                            Prise en main, assistance,
-                                            maintenance.
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- Card 3 — Migros -->
+                        <div class="case-study-card">
+                            <div class="case-study-img-wrap">
+                                <img
+                                    src="{{ asset('assets/media/images/realisations/migros.jpg') }}"
+                                    alt="Migros – ESL Pricer"
+                                    class="case-study-img"
+                                />
+                            </div>
+                            <div class="case-study-body">
+                                <h3 class="case-study-title">
+                                    Le SaaS et la qualité de la solution ont
+                                    convaincu Migros de choisir Pricer
+                                </h3>
+                                <p class="case-study-desc">
+                                    Évolutivité, stabilité et déploiements
+                                    harmonieux en magasin. Découvrez pourquoi
+                                    Migros a fait confiance à Pricer pour
+                                    pérenniser ses opérations.
+                                </p>
+                                <a href="#" class="case-study-btn">
+                                    Voir l'étude de cas
+                                </a>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section
+                    class="wrapper"
+                    style="background-color: var(--color-bg2); color: white"
+                    id="accompagnement"
+                >
+                    <div
+                        class="shape"
+                        style="
+                            background-image: url('{{ asset('assets/images/shapes/shape2.svg') }}');
+                        "
+                    ></div>
+
+                    <div class="appear" style="margin-bottom: 56px">
+                        <h1 class="wrapper-title color-white">
+                            Notre
+                            <span style="color: var(--color-primary)">
+                                accompagnement
+                            </span>
+                        </h1>
+                        <p
+                            class="typing-paragraph"
+                            data-typing-text="Conexus IT gère le projet de bout en bout :"
+                        >
+                            Conexus IT gère le projet de bout en bout :
+                        </p>
+                    </div>
+
+                    <div class="accomp-section">
+                        <!-- Step 1 -->
+                        <div class="accomp-step">
+                            <div class="accomp-step-number">01</div>
+                            <div class="accomp-step-content">
+                                <div class="accomp-step-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M9 11l3 3L22 4" />
+                                        <path
+                                            d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="accomp-step-text">
+                                    <h3 class="accomp-step-title">
+                                        Étude &amp; cadrage
+                                    </h3>
+                                    <p class="accomp-step-desc">
+                                        Audit, dimensionnement, planning et
+                                        périmètre.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accomp-step-connector"></div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="accomp-step">
+                            <div class="accomp-step-number">02</div>
+                            <div class="accomp-step-content">
+                                <div class="accomp-step-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <rect
+                                            x="2"
+                                            y="3"
+                                            width="20"
+                                            height="14"
+                                            rx="2"
+                                        />
+                                        <path d="M8 21h8M12 17v4" />
+                                    </svg>
+                                </div>
+                                <div class="accomp-step-text">
+                                    <h3 class="accomp-step-title">
+                                        Fourniture &amp; installation
+                                    </h3>
+                                    <p class="accomp-step-desc">
+                                        ESL, stations, accessoires, pose et
+                                        configuration.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accomp-step-connector"></div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="accomp-step">
+                            <div class="accomp-step-number">03</div>
+                            <div class="accomp-step-content">
+                                <div class="accomp-step-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 8v4l3 3" />
+                                    </svg>
+                                </div>
+                                <div class="accomp-step-text">
+                                    <h3 class="accomp-step-title">
+                                        Formation &amp; support
+                                    </h3>
+                                    <p class="accomp-step-desc">
+                                        Prise en main, assistance, maintenance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        /* ── Accompagnement Section ──────────────────────── */
+                        .accomp-section {
+                            max-width: 780px;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0;
+                        }
+
+                        /* ── Step row ────────────────────────────────────── */
+                        .accomp-step {
+                            position: relative;
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 28px;
+                            padding-bottom: 0;
+                        }
+
+                        /* ── Vertical connector line ─────────────────────── */
+                        .accomp-step-connector {
+                            position: absolute;
+                            left: 23px;
+                            top: 52px;
+                            width: 2px;
+                            height: calc(100% - 12px);
+                            background: linear-gradient(
+                                to bottom,
+                                var(--color-primary, #4caf50),
+                                transparent
+                            );
+                            opacity: 0.35;
+                        }
+
+                        /* ── Step number badge ───────────────────────────── */
+                        .accomp-step-number {
+                            flex-shrink: 0;
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;
+                            background: var(--color-primary, #4caf50);
+                            color: #fff;
+                            font-size: 0.78rem;
+                            font-weight: 800;
+                            letter-spacing: 0.05em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-shadow: 0 0 0 6px rgba(76, 175, 80, 0.15);
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        /* ── Content card ────────────────────────────────── */
+                        .accomp-step-content {
+                            flex: 1;
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 20px;
+                            background: rgba(255, 255, 255, 0.04);
+                            border: 1px solid rgba(255, 255, 255, 0.08);
+                            border-left: 3px solid var(--color-primary, #4caf50);
+                            border-radius: 12px;
+                            padding: 24px 28px;
+                            margin-bottom: 20px;
+                            transition:
+                                background 0.3s ease,
+                                transform 0.3s ease,
+                                box-shadow 0.3s ease;
+                        }
+
+                        .accomp-step-content:hover {
+                            background: rgba(255, 255, 255, 0.07);
+                            transform: translateX(6px);
+                            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+                        }
+
+                        /* ── Icon ────────────────────────────────────────── */
+                        .accomp-step-icon {
+                            flex-shrink: 0;
+                            width: 44px;
+                            height: 44px;
+                            background: rgba(76, 175, 80, 0.12);
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: var(--color-primary, #4caf50);
+                        }
+
+                        .accomp-step-icon svg {
+                            width: 22px;
+                            height: 22px;
+                            stroke: var(--color-primary, #4caf50);
+                        }
+
+                        /* ── Text ────────────────────────────────────────── */
+                        .accomp-step-text {
+                            flex: 1;
+                        }
+
+                        .accomp-step-title {
+                            font-size: 1.05rem;
+                            font-weight: 700;
+                            color: #ffffff;
+                            margin: 0 0 6px;
+                        }
+
+                        .accomp-step-desc {
+                            font-size: 0.88rem;
+                            color: rgba(255, 255, 255, 0.62);
+                            margin: 0;
+                            line-height: 1.6;
+                        }
+
+                        @media (max-width: 520px) {
+                            .accomp-step {
+                                gap: 16px;
+                            }
+                            .accomp-step-content {
+                                flex-direction: column;
+                                gap: 12px;
+                                padding: 18px 20px;
+                            }
+                        }
+                    </style>
+                </section>
+
                 <!-- contact form -->
                 <section
                     class="wrapper"
@@ -1057,7 +1699,7 @@
                     ></div>
                     <div class="appear">
                         <h1 class="wrapper-title">Contactez-nous</h1>
-                        <p>
+                        <p class="typing-paragraph" data-typing-text="Vous avez une question ou souhaitez en savoir plus sur nos solutions ? N'hésitez pas à nous contacter pour discuter de vos besoins et découvrir comment nous pouvons vous aider à transformer votre activité.">
                             Vous avez une question ou souhaitez en savoir plus
                             sur nos solutions ? N'hésitez pas à nous contacter
                             pour discuter de vos besoins et découvrir comment
@@ -1427,16 +2069,16 @@
         </footer> -->
 
         <!-- ── CTA BANNER (sits on light bg, transitions into dark footer) ── -->
-        <div class="cta-wrapper">
+        <div class="cta-wrapper" style="padding:20px">
             <div class="cta-wordmark">Conexus IT</div>
 
             <div class="cta-panel">
                 <div class="cta-left">
                     <h2>
-                        Prêt à moderniser
+                        L’avenir du retail vous appelle.
                         <br />
-                        votre
-                        <span>étiquetage</span>
+                        Êtes-vous prêt à prendre
+                        <span>l’avantage</span>
                         ?
                     </h2>
                     <p>
@@ -2450,10 +3092,93 @@
             });
         </script>
         <script>
+const text = document.getElementById("text");
+const content = text.textContent;
+
+text.textContent = "";
+
+gsap.to({}, {
+  scrollTrigger: {
+    trigger: text,
+    start: "top 80%"
+  },
+  duration: content.length * 0.05,
+  onUpdate: function () {
+    const progress = Math.floor(this.progress() * content.length);
+    text.textContent = content.substring(0, progress);
+  }
+});
+</script>
+        <script>
+            // Typing effect reusable for any paragraph with .typing-paragraph
+            document.addEventListener('DOMContentLoaded', () => {
+                const typingEls = document.querySelectorAll('.typing-paragraph');
+                if (!typingEls.length) return;
+
+                const speed = 35; // ms per character
+
+                // Prepare each element: store full text in data attribute if missing
+                typingEls.forEach((el) => {
+                    if (!el.dataset.typingText) {
+                        el.dataset.typingText = el.textContent.trim();
+                    }
+                });
+
+                const startTyping = (el) => {
+                    const fullText = el.dataset.typingText || '';
+
+                    // Clear previous timer if any
+                    if (el._typingTimer) {
+                        clearInterval(el._typingTimer);
+                        el._typingTimer = null;
+                    }
+
+                    let index = 0;
+                    el.textContent = '';
+
+                    el._typingTimer = setInterval(() => {
+                        if (index <= fullText.length) {
+                            el.textContent = fullText.slice(0, index);
+                            index += 1;
+                        } else {
+                            clearInterval(el._typingTimer);
+                            el._typingTimer = null;
+                        }
+                    }, speed);
+                };
+
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                const el = entry.target;
+
+                                if (entry.isIntersecting) {
+                                    // Each time it comes into view, restart typing
+                                    startTyping(el);
+                                } else if (!entry.isIntersecting && el._typingTimer) {
+                                    // When it leaves, stop any running timer
+                                    clearInterval(el._typingTimer);
+                                    el._typingTimer = null;
+                                }
+                            });
+                        },
+                        {
+                            threshold: 0.4,
+                        }
+                    );
+
+                    typingEls.forEach((el) => observer.observe(el));
+                } else {
+                    // Fallback: start typing immediately on all
+                    typingEls.forEach((el) => startTyping(el));
+                }
+            });
+        </script>
+        <script>
             const contactForm = document.getElementById('contact-form');
-            const contactSubmitBtn = document.getElementById(
-                'contact-submit-btn'
-            );
+            const contactSubmitBtn =
+                document.getElementById('contact-submit-btn');
             const contactSubmitDefaultHtml = contactSubmitBtn.innerHTML;
 
             function setContactSubmitLoading(isLoading) {
@@ -2478,144 +3203,140 @@
             }
 
             contactForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    let isValid = true;
+                e.preventDefault();
+                let isValid = true;
 
-                    // Clear previous errors
-                    document
-                        .querySelectorAll('.field-error')
-                        .forEach((el) => (el.textContent = ''));
-                    document
-                        .querySelectorAll('input, textarea, select')
-                        .forEach((el) => (el.style.borderColor = ''));
+                // Clear previous errors
+                document
+                    .querySelectorAll('.field-error')
+                    .forEach((el) => (el.textContent = ''));
+                document
+                    .querySelectorAll('input, textarea, select')
+                    .forEach((el) => (el.style.borderColor = ''));
 
-                    // ── Nom & Prénom (required) ──────────────────────────────
-                    const nom = document.getElementById('nom');
-                    const nomError = document.getElementById('nom-error');
-                    if (!nom.value.trim()) {
-                        nomError.appendChild(
-                            document.createTextNode('Le nom est obligatoire.')
-                        );
-                        nom.style.borderColor = '#dc3545';
-                        isValid = false;
-                    }
+                // ── Nom & Prénom (required) ──────────────────────────────
+                const nom = document.getElementById('nom');
+                const nomError = document.getElementById('nom-error');
+                if (!nom.value.trim()) {
+                    nomError.appendChild(
+                        document.createTextNode('Le nom est obligatoire.')
+                    );
+                    nom.style.borderColor = '#dc3545';
+                    isValid = false;
+                }
 
-                    // ── Téléphone (required + Moroccan format) ───────────────
-                    const tel = document.getElementById('tel');
-                    const telError = document.getElementById('tel-error');
-                    // Accepts: 06XXXXXXXX | 07XXXXXXXX | 05XXXXXXXX
-                    // Also accepts international: +2126... / 002126...
-                    const moroccanRegex =
-                        /^(?:0[567]\d{8}|(?:\+212|00212)[567]\d{8})$/;
-                    const telClean = tel.value.trim().replace(/\s+/g, '');
-                    console.log('Cleaned phone:', telClean);
-                    if (!telClean) {
-                        telError.textContent =
-                            'Le numéro de téléphone est obligatoire.';
-                        tel.style.borderColor = '#dc3545';
-                        isValid = false;
-                    } else if (!moroccanRegex.test(telClean)) {
-                        telError.textContent =
-                            'Numéro invalide. Il doit commencer par 05, 06 ou 07 (ex: 0612345678).';
-                        tel.style.borderColor = '#dc3545';
-                        isValid = false;
-                    }
+                // ── Téléphone (required + Moroccan format) ───────────────
+                const tel = document.getElementById('tel');
+                const telError = document.getElementById('tel-error');
+                // Accepts: 06XXXXXXXX | 07XXXXXXXX | 05XXXXXXXX
+                // Also accepts international: +2126... / 002126...
+                const moroccanRegex =
+                    /^(?:0[567]\d{8}|(?:\+212|00212)[567]\d{8})$/;
+                const telClean = tel.value.trim().replace(/\s+/g, '');
+                console.log('Cleaned phone:', telClean);
+                if (!telClean) {
+                    telError.textContent =
+                        'Le numéro de téléphone est obligatoire.';
+                    tel.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else if (!moroccanRegex.test(telClean)) {
+                    telError.textContent =
+                        'Numéro invalide. Il doit commencer par 05, 06 ou 07 (ex: 0612345678).';
+                    tel.style.borderColor = '#dc3545';
+                    isValid = false;
+                }
 
-                    // ── Email (required + format) ────────────────────────────
-                    const email = document.getElementById('email');
-                    // Add error small tag dynamically if it doesn't exist
-                    let emailError = document.getElementById('email-error');
-                    if (!emailError) {
-                        emailError = document.createElement('small');
-                        emailError.id = 'email-error';
-                        emailError.className = 'field-error';
-                        emailError.style.cssText =
-                            'color:#dc3545; display:block; margin-top:6px;';
-                        email.insertAdjacentElement('afterend', emailError);
-                    }
+                // ── Email (required + format) ────────────────────────────
+                const email = document.getElementById('email');
+                // Add error small tag dynamically if it doesn't exist
+                let emailError = document.getElementById('email-error');
+                if (!emailError) {
+                    emailError = document.createElement('small');
+                    emailError.id = 'email-error';
+                    emailError.className = 'field-error';
+                    emailError.style.cssText =
+                        'color:#dc3545; display:block; margin-top:6px;';
+                    email.insertAdjacentElement('afterend', emailError);
+                }
 
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!email.value.trim()) {
-                        emailError.textContent =
-                            "L'adresse email est obligatoire.";
-                        email.style.borderColor = '#dc3545';
-                        isValid = false;
-                    } else if (!emailRegex.test(email.value.trim())) {
-                        emailError.textContent =
-                            "L'adresse email n'est pas valide.";
-                        email.style.borderColor = '#dc3545';
-                        isValid = false;
-                    }
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim()) {
+                    emailError.textContent = "L'adresse email est obligatoire.";
+                    email.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else if (!emailRegex.test(email.value.trim())) {
+                    emailError.textContent =
+                        "L'adresse email n'est pas valide.";
+                    email.style.borderColor = '#dc3545';
+                    isValid = false;
+                }
 
-                    // ── Block submit if invalid ──────────────────────────────
-                    if (!isValid) {
-                        // Scroll to first error
-                        const firstError = document.querySelector(
-                            '.field-error:not(:empty)'
-                        );
-                        if (firstError)
-                            firstError.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'center',
-                            });
-                    } else {
-                        setContactSubmitLoading(true);
+                // ── Block submit if invalid ──────────────────────────────
+                if (!isValid) {
+                    // Scroll to first error
+                    const firstError = document.querySelector(
+                        '.field-error:not(:empty)'
+                    );
+                    if (firstError)
+                        firstError.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center',
+                        });
+                } else {
+                    setContactSubmitLoading(true);
 
-                        //prepare data as an object
-                        const formData = {
-                            nom: nom.value.trim() || null,
-                            societe:
-                                document
-                                    .getElementById('societe')
-                                    .value.trim() || null,
-                            tel: tel.value.trim() || null,
-                            email: email.value.trim() || null,
-                            message:
-                                document
-                                    .getElementById('message')
-                                    .value.trim() || null,
-                            ville:
-                                document.getElementById('ville').value.trim() ||
-                                null,
-                            type:
-                                document.getElementById('type').value.trim() ||
-                                null,
-                            surface:
-                                document
-                                    .getElementById('surface')
-                                    .value.trim() || null,
-                            etiquettes:
-                                document
-                                    .getElementById('etiquettes')
-                                    .value.trim() || null,
-                        };
-                        fetch('/contact', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'X-CSRF-TOKEN':
-                                    document.querySelector(
-                                        'meta[name="csrf-token"]'
-                                    )?.content || '',
-                            },
-                            body: JSON.stringify(formData),
+                    //prepare data as an object
+                    const formData = {
+                        nom: nom.value.trim() || null,
+                        societe:
+                            document.getElementById('societe').value.trim() ||
+                            null,
+                        tel: tel.value.trim() || null,
+                        email: email.value.trim() || null,
+                        message:
+                            document.getElementById('message').value.trim() ||
+                            null,
+                        ville:
+                            document.getElementById('ville').value.trim() ||
+                            null,
+                        type:
+                            document.getElementById('type').value.trim() ||
+                            null,
+                        surface:
+                            document.getElementById('surface').value.trim() ||
+                            null,
+                        etiquettes:
+                            document
+                                .getElementById('etiquettes')
+                                .value.trim() || null,
+                    };
+                    fetch('/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN':
+                                document.querySelector(
+                                    'meta[name="csrf-token"]'
+                                )?.content || '',
+                        },
+                        body: JSON.stringify(formData),
+                    })
+                        .then((res) => {
+                            if (res.ok) {
+                                showModal('success', formData.nom);
+                                this.reset();
+                            } else {
+                                throw new Error('Erreur lors de l’envoi.');
+                            }
                         })
-                            .then((res) => {
-                                if (res.ok) {
-                                    showModal('success', formData.nom);
-                                    this.reset();
-                                } else {
-                                    throw new Error('Erreur lors de l’envoi.');
-                                }
-                            })
-                            .catch(() => {
-                                showModal('error');
-                            })
-                            .finally(() => {
-                                setContactSubmitLoading(false);
-                            });
-                    }
-                });
+                        .catch(() => {
+                            showModal('error');
+                        })
+                        .finally(() => {
+                            setContactSubmitLoading(false);
+                        });
+                }
+            });
 
             // ── Live feedback: clear error on input ─────────────────────
             ['nom', 'tel', 'email'].forEach((id) => {

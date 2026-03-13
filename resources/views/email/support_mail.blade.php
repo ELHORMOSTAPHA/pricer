@@ -251,11 +251,15 @@
                 color: #1a2230;
                 margin-bottom: 14px;
             }
+
             .action-btns {
                 display: flex;
                 gap: 12px;
                 flex-wrap: wrap;
                 margin-bottom: 28px;
+            }
+            .action-btns a {
+                display: inline-block;
             }
             .action-btn {
                 display: inline-flex;

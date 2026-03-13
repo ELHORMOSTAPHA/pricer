@@ -454,7 +454,7 @@
 
                 <!-- CTA -->
                 <div class="cta-wrap">
-                    <a href="https://wa.me/212600000000" class="cta-btn">
+                    <a href="https://wa.me/212661220585" class="cta-btn">
                         📲 Contacter via WhatsApp
                     </a>
                 </div>
@@ -477,7 +477,7 @@
                     </div>
                     <div class="contact-info">
                         <p>Une question urgente ? Appelez-nous directement</p>
-                        <a href="tel:+212600000000">+212 6XX XX XX XX</a>
+                        <a href="tel:+212661220585">+212 661 220 585</a>
                     </div>
                 </div>
             </div>
